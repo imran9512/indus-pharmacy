@@ -11,7 +11,7 @@ export default function Categories() {
             key={index}
             className={`text-sm ${index % 7 === 6 ? "self-end ml-auto" : ""}`}
           >
-            <Link href={`/${item.toLocaleUpperCase()}`}>{item}</Link>
+            <Link href={`/${item.toLowerCase()}`}>{item}</Link>
           </li>
         ))}
       </ul>
