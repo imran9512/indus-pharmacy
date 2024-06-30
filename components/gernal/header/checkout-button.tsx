@@ -4,11 +4,12 @@ import Link from "next/link";
 
 export default function CheckOutButton() {
   return (
-    <Button asChild className="bg-[#228be61a] text-[#228be6] hover:bg-">
-      <Link
-        href={"/checkout"}
-        className="flex items-center gap-3 text-[#228be6]"
-      >
+    <Button
+      size={"icon"}
+      className="rounded-full bg-[#228be61a] text-[#228be6] hover:bg-[#228be61a]"
+      asChild
+    >
+      <Link href={"/checkout"} className="relative">
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +26,7 @@ export default function CheckOutButton() {
             />
           </svg>
         </span>
-        <span>Checkout</span>
-        <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#228be6] text-white p-2 text-lg">
+        <span className="flex items-center justify-center h-2 w-2 rounded-full bg-[#228be6] text-white p-2 text-sm absolute top-0 -right-2">
           1
         </span>
       </Link>
