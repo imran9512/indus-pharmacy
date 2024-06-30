@@ -2,6 +2,7 @@ import type { AllProductsType } from "@/types/product-schemas";
 export const AllProducts: AllProductsType = [
   {
     id: 1,
+    name: "Product 1",
     brand: "Sartaj Pharma",
     ingredients: [""],
     price: 5000,
@@ -23,6 +24,7 @@ export const AllProducts: AllProductsType = [
   },
   {
     id: 2,
+    name: "Product 1",
     brand: "Sartaj Pharma",
     ingredients: [""],
     price: 12000,

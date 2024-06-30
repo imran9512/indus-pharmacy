@@ -7,6 +7,7 @@ const reviewSchema = z.object({
 });
 const productSchema = z.object({
   id: z.number(),
+  name: z.string(),
   brand: z.string(),
   ingredients: z.array(z.string()),
   price: z.number(),
