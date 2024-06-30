@@ -9,7 +9,6 @@ type ProductSlug = {
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
-  console.log(productSlug);
   if (!productSlug) {
     notFound();
   }
@@ -28,22 +27,17 @@ export default async function Product({ params }: ProductSlug) {
               brandName={product.brand}
             />
             <AddToCart />
-            <p className="text-xs text-zinc-600 pb-8">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-              nobis illum perferendis sint repudiandae quaerat officia
-              doloremque, doloribus incidunt soluta odio. Sint, deserunt eaque.
-              Voluptatem ipsa ab obcaecati corrupti libero!
-            </p>
+            <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
             <div className="space-y-6">
               <div>
                 <p className="font-semibold text-xs text-zinc-600">Origin</p>
                 <p className="text-xs text-zinc-600">
-                  Made in and imported from India
+                  Made in and imported from {product.origin}
                 </p>
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">Brand</p>
-                <p className="text-xs text-zinc-600">Blah Blah</p>
+                <p className="text-xs text-zinc-600">{product.brand}</p>
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
@@ -56,10 +50,7 @@ export default async function Product({ params }: ProductSlug) {
                   Additional Information
                 </p>
                 <p className="text-xs text-zinc-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                  aperiam error, laboriosam, culpa quidem exercitationem minus
-                  vero a sed velit nam minima deleniti quis obcaecati asperiores
-                  quisquam dolorem voluptate maxime!
+                  {product.additional_info}
                 </p>
               </div>
             </div>
