@@ -13,9 +13,9 @@ export default function Product({ params }: ProductSlug) {
 
   return (
     <main className="flex items-center justify-center">
-      <article className="flex flex-col items-center justify-between max-w-screen-xl lg:px-4 w-full bg-green-100">
-        <div className="flex-1 basis-1/2 w-full"></div>
-        <div className="px-4 max-w-xl md:p-10 mt-4 mb-10 basis-1/2 bg-red-100 w-full ml-auto">
+      <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full bg-green-100">
+        <div className="lg:flex-1 lg:basis-1/2 w-full"></div>
+        <div className="p-4 max-w-xl md:p-10 mt-4 mb-10 lg:basis-1/2 bg-red-100 w-full lg:ml-auto">
           <header className="flex flex-col gap-1">
             <div className="w-full flex items-center justify-between">
               <p className="text-xs text-zinc-600">Brand Name</p>
