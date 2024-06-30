@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+const reviewSchema = z.object({
+  reviewer_name: z.string(),
+  stars: z.number().min(1).max(5),
+  review_text: z.string(),
+});
 const productSchema = z.object({
   id: z.number(),
   brand: z.string(),
@@ -13,6 +18,7 @@ const productSchema = z.object({
   images: z.array(z.string()),
   amount: z.string(),
   catagories: z.array(z.string()),
+  reviews: z.array(reviewSchema),
 });
 
 const allProductsSchema = z.array(productSchema);

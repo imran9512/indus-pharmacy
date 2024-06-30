@@ -13,6 +13,13 @@ export const AllProducts: AllProductsType = [
     images: [""],
     amount: "5 Capsules",
     catagories: ["category-1"],
+    reviews: [
+      {
+        reviewer_name: "Flame Tyror",
+        review_text: "blah blah blah",
+        stars: 3,
+      },
+    ],
   },
   {
     id: 2,
@@ -27,5 +34,12 @@ export const AllProducts: AllProductsType = [
     images: [""],
     amount: "5 Capsules",
     catagories: ["category-1"],
+    reviews: [
+      {
+        reviewer_name: "Flame Tyror",
+        review_text: "blah blah blah",
+        stars: 3,
+      },
+    ],
   },
 ];
