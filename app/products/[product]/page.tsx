@@ -29,6 +29,41 @@ export default function Product({ params }: ProductSlug) {
             <p className="text-xs text-zinc-600">5 Capsoules</p>
           </header>
           <AddToCart />
+          <p className="text-xs text-zinc-600 pb-8">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+            nobis illum perferendis sint repudiandae quaerat officia doloremque,
+            doloribus incidunt soluta odio. Sint, deserunt eaque. Voluptatem
+            ipsa ab obcaecati corrupti libero!
+          </p>
+          <div className="space-y-6">
+            <div>
+              <p className="font-semibold text-xs text-zinc-600">Origin</p>
+              <p className="text-xs text-zinc-600">
+                Made in and imported from India
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-xs text-zinc-600">Brand</p>
+              <p className="text-xs text-zinc-600">Blah Blah</p>
+            </div>
+            <div>
+              <p className="font-semibold text-xs text-zinc-600">
+                Active Substance
+              </p>
+              <p className="text-xs text-zinc-600">Temozokomide</p>
+            </div>
+            <div>
+              <p className="font-semibold text-xs text-zinc-600">
+                Additional Information
+              </p>
+              <p className="text-xs text-zinc-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                aperiam error, laboriosam, culpa quidem exercitationem minus
+                vero a sed velit nam minima deleniti quis obcaecati asperiores
+                quisquam dolorem voluptate maxime!
+              </p>
+            </div>
+          </div>
         </div>
       </article>
     </main>
