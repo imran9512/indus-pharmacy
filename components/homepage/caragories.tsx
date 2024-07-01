@@ -10,7 +10,7 @@ export default function Categories() {
         {AllCatagories.map((catagory) => (
           <Link
             key={catagory.slug}
-            href={catagory.slug}
+            href={`/catagories/${catagory.slug}`}
             className="text-2xl font-bold p-4 border text-center rounded-xl shadow-md"
           >
             {catagory.main_catagory}

@@ -74,7 +74,7 @@ export const categories: string[] = [
   "Vitamins and Supplements",
   "Women's Health",
 ];
-export const AllCatagories = [
+export const AllCatagories: Category[] = [
   {
     main_catagory: "Addiction Treatment",
     slug: "addiction-treatment",
