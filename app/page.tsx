@@ -1,11 +1,11 @@
-import Header from "@/components/gernal/header/header";
 import AllGenres from "@/components/homepage/all-genres";
-
+import HeroSection from "@/components/homepage/hero-section";
 export default function Home() {
   return (
     <main>
-      <Header />
+      <HeroSection />
       <AllGenres />
+      <div className="flex-1"></div>
     </main>
   );
 }

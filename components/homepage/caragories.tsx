@@ -1,20 +1,22 @@
-import { categories } from "@/constants/catagories";
 import Link from "next/link";
-
+import { AllCatagories } from "@/constants/catagories";
 export default function Categories() {
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-2xl font-bold">Categories and Tags</h2>
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 w-full gap-x-8">
-        {categories.map((item, index) => (
-          <li
-            key={index}
-            className={`text-sm ${index % 7 === 6 ? "self-end ml-auto" : ""}`}
+      <h2 className="text-4xl font-bold mb-6 text-center">
+        Categories and Tags
+      </h2>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-8">
+        {AllCatagories.map((catagory) => (
+          <Link
+            key={catagory.slug}
+            href={`/catagories/${catagory.slug}`}
+            className="text-2xl font-bold p-4 border text-center rounded-xl shadow-md"
           >
-            <Link href={`/${item.toLocaleUpperCase()}`}>{item}</Link>
-          </li>
+            {catagory.main_catagory}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
