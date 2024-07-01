@@ -17,7 +17,7 @@ export const AllProducts: AllProductsType = [
     in_stock: false,
     images: [""],
     amount: "5 Capsules",
-    catagories: ["category-1"],
+    catagories: ["Alcohol Dependence"],
     reviews: [
       {
         reviewer_name: "Flame Tyror",
@@ -40,7 +40,7 @@ export const AllProducts: AllProductsType = [
     in_stock: true,
     images: [""],
     amount: "5 Capsules",
-    catagories: ["category-1"],
+    catagories: ["Generalized Anxiety Disorder"],
     reviews: [
       {
         reviewer_name: "Flame Tyror",
