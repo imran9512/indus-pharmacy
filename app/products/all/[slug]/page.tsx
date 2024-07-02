@@ -20,7 +20,7 @@ export default function SearchedProduct({ params }: SearchedProduct) {
               <div className="h-64 w-96 bg-blue-800 rounded-lg mb-4"></div>
               <ol className="flex flex-col gap-3">
                 <li className="flex items-center gap-2">
-                  <Globe className="self-start h-6 w-6" />
+                  <Globe className="self-start size-6" />
                   <p>
                     {product.imported_from.toLowerCase() ===
                     product.made_in.toLowerCase()
@@ -30,7 +30,7 @@ export default function SearchedProduct({ params }: SearchedProduct) {
                 </li>
                 {product.ingredients?.length && (
                   <li className="flex items-center gap-2 ">
-                    <Columns4 className="self-start h-6 w-6" />
+                    <Columns4 className="self-start size-6" />
                     <ol className="flex items-center gap-1">
                       {product.ingredients.map((salt, index) => (
                         <li key={index}>{salt}</li>
@@ -40,7 +40,7 @@ export default function SearchedProduct({ params }: SearchedProduct) {
                 )}
                 {product.amount && (
                   <li className="flex items-center gap-2 ">
-                    <Pill className="self-start h-6 w-6" />
+                    <Pill className="self-start size-6" />
                     <p>{product.amount}</p>
                   </li>
                 )}
