@@ -5,7 +5,7 @@ type ProductThumbnailProps = {
 };
 export default function ProductThumbnail({ product }: ProductThumbnailProps) {
   return (
-    <div className="px-4 py-2 border">
+    <div className="px-4 py-2 border max-w-96">
       <h4 className="text-2xl font-bold mb-2 rounded-lg">{product.name}</h4>
       <p className="mb-4 text-base h-16">{product.description}</p>
       <div className="h-64 w-96 bg-blue-800 rounded-lg mb-4"></div>
