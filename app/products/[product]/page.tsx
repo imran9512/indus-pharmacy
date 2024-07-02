@@ -32,7 +32,10 @@ export default async function Product({ params }: ProductSlug) {
               <div>
                 <p className="font-semibold text-xs text-zinc-600">Origin</p>
                 <p className="text-xs text-zinc-600">
-                  Made in and imported from {product.origin}
+                  {product.imported_from.toLowerCase() ===
+                  product.made_in.toLowerCase()
+                    ? `Made in and imported from ${product.imported_from}`
+                    : `Made in ${product.made_in}, imported from ${product.imported_from}`}
                 </p>
               </div>
               <div>

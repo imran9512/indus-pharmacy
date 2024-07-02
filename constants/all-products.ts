@@ -8,7 +8,8 @@ export const AllProducts: AllProductsType = [
     ingredients: [""],
     price: 5000,
     description: `Sorafenib is used to treat kidney, liver, and thyroid cancer.It works by slowing or stopping the growth of cancer cells.`,
-    origin: "India",
+    made_in: "India",
+    imported_from: "India",
     active_substances: ["Sorafenib"],
     additional_info: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
                   aperiam error, laboriosam, culpa quidem exercitationem minus
@@ -34,8 +35,9 @@ export const AllProducts: AllProductsType = [
     ingredients: [""],
     price: 12000,
     description: `Sorafenib is used to treat kidney, liver, and thyroid cancer.It works by slowing or stopping the growth of cancer cells.`,
-    origin: "USA",
     active_substances: ["Sorafenib"],
+    made_in: "USA",
+    imported_from: "UK",
     additional_info: "",
     in_stock: true,
     images: [""],
