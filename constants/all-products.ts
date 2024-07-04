@@ -17,7 +17,12 @@ export const AllProducts: AllProductsType = [
                   vero a sed velit nam minima deleniti quis obcaecati asperiores
                   quisquam dolorem voluptate maxime!`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "5 Capsules",
     catagories: ["Alcohol Dependence", "Panic Disorder", "Drug Addiction"],
     reviews: [
@@ -41,7 +46,12 @@ export const AllProducts: AllProductsType = [
     imported_from: "UK",
     additional_info: "",
     in_stock: true,
-    images: [""],
+    images: [
+      "product-2.1.jpg",
+      "product-2.2.jpg",
+      "product-2.3.jpg",
+      "product-2.4.jpg",
+    ],
     amount: "5 Capsules",
     catagories: [
       "Panic Disorder",
@@ -70,7 +80,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance1"],
     additional_info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-3.1.jpg",
+      "product-3.2.jpg",
+      "product-3.3.jpg",
+      "product-3.4.jpg",
+    ],
     amount: "10 Tablets",
     catagories: ["Hypertension"],
     reviews: [
@@ -94,7 +109,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance2"],
     additional_info: `Consectetur adipiscing elit.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-4.1.jpg",
+      "product-4.2.jpg",
+      "product-4.3.jpg",
+      "product-4.4.jpg",
+    ],
     amount: "20 Tablets",
     catagories: ["Pain Relief"],
     reviews: [
@@ -118,7 +138,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance3"],
     additional_info: `Adipiscing elit.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "15 Capsules",
     catagories: ["Immune Support", "Drug Addiction"],
     reviews: [
@@ -142,7 +167,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance4"],
     additional_info: `Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "30 Capsules",
     catagories: ["Weight Loss"],
     reviews: [
@@ -166,7 +196,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance5"],
     additional_info: `Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "50 Capsules",
     catagories: ["Wellness", "Drug Addiction"],
     reviews: [
@@ -190,7 +225,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance6"],
     additional_info: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "10 Tablets",
     catagories: ["Heart Health", "Alcohol Dependence"],
     reviews: [
@@ -214,7 +254,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance7"],
     additional_info: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "20 Tablets",
     catagories: ["Gastrointestinal Health", "Alcohol Dependence"],
     reviews: [
@@ -238,7 +283,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance8"],
     additional_info: `Lorem ipsum dolor sit amet.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-3.1.jpg",
+      "product-3.2.jpg",
+      "product-3.3.jpg",
+      "product-3.4.jpg",
+    ],
     amount: "50 ml",
     catagories: ["Dermatology", "Alcohol Dependence", "Breast Cancer"],
     reviews: [
@@ -262,7 +312,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance9"],
     additional_info: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "60 Tablets",
     catagories: ["Vision Health", "PCD Type 2"],
     reviews: [
@@ -286,7 +341,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance10"],
     additional_info: `Nemo enim ipsam voluptatem quia voluptas sit aspernatur.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "30 Capsules",
     catagories: ["Mental Health", "PCD Type 2"],
     reviews: [
@@ -310,7 +370,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance11"],
     additional_info: `Neque porro quisquam est, qui dolorem ipsum quia dolor.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-2.1.jpg",
+      "product-2.2.jpg",
+      "product-2.3.jpg",
+      "product-2.4.jpg",
+    ],
     amount: "90 Tablets",
     catagories: ["Bone Health", "PCD Type 2"],
     reviews: [
@@ -334,7 +399,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance12"],
     additional_info: `Ut labore et dolore magnam aliquam quaerat voluptatem.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-2.1.jpg",
+      "product-2.2.jpg",
+      "product-2.3.jpg",
+      "product-2.4.jpg",
+    ],
     amount: "100 ml",
     catagories: ["Hair Health", "PCD Type 2"],
     reviews: [
@@ -358,7 +428,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance13"],
     additional_info: `Enim ad minima veniam, quis nostrum exercitationem ullam corporis.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-4.1.jpg",
+      "product-4.2.jpg",
+      "product-4.3.jpg",
+      "product-4.4.jpg",
+    ],
     amount: "30 Tablets",
     catagories: ["Sleep Health", "Gambling Addiction"],
     reviews: [
@@ -382,7 +457,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance14"],
     additional_info: `Laboriosam, nisi ut aliquid ex ea commodi consequatur.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "6 Bottles",
     catagories: ["Energy", "Social Anxiety Disorder"],
     reviews: [
@@ -406,7 +486,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance15"],
     additional_info: `Quis autem vel eum iure reprehenderit.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-4.1.jpg",
+      "product-4.2.jpg",
+      "product-4.3.jpg",
+      "product-4.4.jpg",
+    ],
     amount: "50 Tablets",
     catagories: ["Diabetes", "Social Anxiety Disorder"],
     reviews: [
@@ -430,7 +515,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance16"],
     additional_info: `Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "60 Capsules",
     catagories: ["Joint Health", "Social Anxiety Disorder"],
     reviews: [
@@ -454,7 +544,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance17"],
     additional_info: `Laboris nisi ut aliquip ex ea commodo consequat.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-5.1.jpg",
+      "product-5.2.jpg",
+      "product-5.3.jpg",
+      "product-5.4.jpg",
+    ],
     amount: "40 Tablets",
     catagories: ["Kidney Health", "PCD Type 1"],
     reviews: [
@@ -478,7 +573,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance18"],
     additional_info: `Eum fugiat quo voluptas nulla pariatur.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "30 Capsules",
     catagories: ["Generalized Anxiety Disorder", "Acne"],
     reviews: [
@@ -502,7 +602,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance19"],
     additional_info: `Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-4.1.jpg",
+      "product-4.2.jpg",
+      "product-4.3.jpg",
+      "product-4.4.jpg",
+    ],
     amount: "20 Tablets",
     catagories: ["Respiratory Health", "Acne"],
     reviews: [
@@ -526,7 +631,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance20"],
     additional_info: `Sunt in culpa qui officia deserunt mollit anim id est laborum.`,
     in_stock: false,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "10 Tablets",
     catagories: ["Allergy", "Dermatitis"],
     reviews: [
@@ -574,7 +684,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance22"],
     additional_info: `Nam libero tempore, cum soluta nobis est eligendi optio.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "60 Capsules",
     catagories: ["Stress Relief", "Psoriasis"],
     reviews: [
@@ -730,7 +845,12 @@ export const AllProducts: AllProductsType = [
     active_substances: ["Substance28"],
     additional_info: `Sed quia non numquam eius modi tempora incidunt ut labore et dolore.`,
     in_stock: true,
-    images: [""],
+    images: [
+      "product-1.1.jpg",
+      "product-1.2.jpg",
+      "product-1.3.jpg",
+      "product-1.4.jpg",
+    ],
     amount: "60 Tablets",
     catagories: ["Memory Health"],
     reviews: [
