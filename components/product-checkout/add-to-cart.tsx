@@ -9,7 +9,6 @@ type AddToCartProps = {
 };
 export default function AddToCart({ product }: AddToCartProps) {
   const { addToCart, cartItems } = useCartStore();
-  console.log(cartItems);
   return (
     <div className="h-28 flex items-center gap-1">
       <Button onClick={() => addToCart(product)}>Add To Cart</Button>
