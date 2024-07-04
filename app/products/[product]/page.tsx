@@ -32,7 +32,7 @@ export default async function Product({ params }: ProductSlug) {
               quantity={product.amount}
               brandName={product.brand}
             />
-            <AddToCart />
+            <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
             <div className="space-y-6">
               <div>
