@@ -35,7 +35,7 @@ export const AllCatagories: Category[] = [
   {
     main_catagory: "SkinCare",
     slug: "skincare",
-    sub_catagories: ["Moisturizers", "Sunscreens", "Anti-Aging Products"],
+    sub_catagories: ["Moisturizers", "Sunscreens", "Anti Aging Products"],
   },
   {
     main_catagory: "Sleep",
@@ -49,7 +49,7 @@ export const AllCatagories: Category[] = [
   },
   {
     main_catagory: "Anti Ageing",
-    slug: "anti-ageing",
+    slug: "antiageing",
     sub_catagories: ["Wrinkles", "Age Spots", "Skin Firmness"],
   },
   {

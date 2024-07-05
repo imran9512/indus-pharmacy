@@ -19,7 +19,7 @@ export default function CartItems() {
             </div>
             <div className="flex gap-4 items-center self-center">
               <Button size={"icon"} className="bg-red-200 hover:bg-red-200">
-                <Trash className="text-[#fa5252] h-6 w-6" />
+                <Trash className="text-[#fa5252] size-6" />
               </Button>
               <Button
                 className="bg-[#228be61a] text-[#228be6] hover:bg-bg-[#228be61a]"

@@ -1,10 +1,17 @@
+"use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
-
-export default function AddToCart() {
+import { useState } from "react";
+import { Product } from "@/types/product-schemas";
+import { useCartStore } from "@/stores/useCartStore";
+type AddToCartProps = {
+  product: Product;
+};
+export default function AddToCart({ product }: AddToCartProps) {
+  const { addToCart, cartItems } = useCartStore();
   return (
     <div className="h-28 flex items-center gap-1">
-      <Button>Add To Cart</Button>
+      <Button onClick={() => addToCart(product)}>Add To Cart</Button>
       <Button asChild className="px-2 bg-green-700 hover:bg-green-700">
         <Link href={"#"}>
           <svg

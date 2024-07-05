@@ -14,7 +14,9 @@ export default function SubCatagories({ slug }: { slug: string }) {
       <ul className="grid grid-cols-3 items-center w-full gap-x-8">
         {subCatagories?.map((catagory) => (
           <Link
-            href={`/products/${catagory.toLowerCase().replace(/\s+/g, "-")}`}
+            href={`/products/all/${catagory
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
             key={catagory}
             className="text-center px-4 bg-[#228be61a] text-[#228be6] py-2 rounded-3xl"
           >

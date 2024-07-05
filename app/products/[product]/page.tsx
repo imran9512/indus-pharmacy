@@ -1,3 +1,4 @@
+import ProductCarousel from "@/components/checkout/product-carousel";
 import AddToCart from "@/components/product-checkout/add-to-cart";
 import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
@@ -17,7 +18,12 @@ export default async function Product({ params }: ProductSlug) {
     <main className="flex items-center justify-center">
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full bg-green-100">
-          <div className="lg:flex-1 lg:basis-1/2 w-full"></div>
+          <div className="lg:flex-1 lg:basis-1/2 w-full">
+            <ProductCarousel
+              images={product.images}
+              productName={product.name}
+            />
+          </div>
           <div className="p-4 max-w-xl md:p-10 mt-4 mb-10 lg:basis-1/2 bg-red-100 w-full lg:ml-auto">
             <ProductHeader
               productName={product?.name}
@@ -26,13 +32,16 @@ export default async function Product({ params }: ProductSlug) {
               quantity={product.amount}
               brandName={product.brand}
             />
-            <AddToCart />
+            <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
             <div className="space-y-6">
               <div>
                 <p className="font-semibold text-xs text-zinc-600">Origin</p>
                 <p className="text-xs text-zinc-600">
-                  Made in and imported from {product.origin}
+                  {product.imported_from.toLowerCase() ===
+                  product.made_in.toLowerCase()
+                    ? `Made in and imported from ${product.imported_from}`
+                    : `Made in ${product.made_in}, imported from ${product.imported_from}`}
                 </p>
               </div>
               <div>
