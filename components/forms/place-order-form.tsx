@@ -33,7 +33,7 @@ export default function PlaceOrderForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      number: Number(""),
+      number: "",
       address: "",
       city: "",
       additional_info: "",
