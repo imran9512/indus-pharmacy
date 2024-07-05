@@ -22,7 +22,7 @@ export async function sendMail({
   text,
   html,
 }: {
-  email: string;
+  email?: string;
   sendTo?: string;
   subject: string;
   text: string;
@@ -40,7 +40,7 @@ export async function sendMail({
     return;
   }
   const info = await transporter.sendMail({
-    from: email,
+    from: email || SMTP_SERVER_USERNAME,
     to: sendTo || SITE_MAIL_RECIEVER,
     subject: subject,
     text: text,

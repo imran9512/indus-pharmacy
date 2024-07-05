@@ -15,6 +15,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Button } from "../ui/button";
+import { sendMail } from "@/lib/sendMail";
 
 const formSchema = z.object({
   name: z
@@ -42,6 +43,10 @@ export default function PlaceOrderForm() {
   });
   async function onsubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    await sendMail({
+      subject: "New Order Placed",
+      text: `${values}`,
+    });
   }
   return (
     <Form {...form}>
