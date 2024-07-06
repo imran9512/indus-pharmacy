@@ -1,3 +1,4 @@
+// stores/useCartStore.ts
 import { create } from "zustand";
 import { Product } from "@/types/product-schemas";
 
@@ -5,9 +6,10 @@ type CartStore = {
   cartItems: Product[];
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
+  getProductCount: (productId: number) => number;
 };
 
-export const useCartStore = create<CartStore>((set) => ({
+export const useCartStore = create<CartStore>((set, get) => ({
   cartItems: [],
   addToCart: (product) =>
     set((state) => ({
@@ -23,4 +25,7 @@ export const useCartStore = create<CartStore>((set) => ({
       }
       return state;
     }),
+  getProductCount: (productId) => {
+    return get().cartItems.filter((item) => item.id === productId).length;
+  },
 }));
