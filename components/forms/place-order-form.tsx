@@ -16,6 +16,9 @@ import { Textarea } from "../ui/textarea";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Button } from "../ui/button";
 import { sendMail } from "@/lib/sendMail";
+import { toast } from "sonner";
+import { Loader } from "lucide-react";
+import { useCartStore } from "@/stores/useCartStore";
 
 const formSchema = z.object({
   name: z
@@ -41,13 +44,56 @@ export default function PlaceOrderForm() {
       shipping_method: "TCS",
     },
   });
+  const { cartItems } = useCartStore();
+  console.log(cartItems);
+  const isLoading = form.formState.isSubmitting;
   async function onsubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    await sendMail({
-      subject: "New Order Placed",
-      text: `${values}`,
+
+    const productCountMap = new Map();
+    let totalPrice = 0;
+
+    cartItems.forEach((item) => {
+      if (productCountMap.has(item.id)) {
+        productCountMap.set(item.id, {
+          ...item,
+          count: productCountMap.get(item.id).count + 1,
+        });
+      } else {
+        productCountMap.set(item.id, { ...item, count: 1 });
+      }
+      totalPrice += item.price;
     });
+
+    let orderDetails = "Order Details:\n";
+    productCountMap.forEach((item) => {
+      orderDetails += `${item.name} (${item.count} piece(s)) = ${
+        item.price
+      } x ${item.count} = ${item.price * item.count} PKR\n`;
+    });
+    orderDetails += `Total Price: ${totalPrice} PKR\n`;
+
+    const mailText = `
+      Name: ${values.name}
+      Contact Number: ${values.number}
+      Address: ${values.address}
+      City: ${values.city}
+      Shipping Method: ${values.shipping_method}
+      \n${orderDetails}
+    `;
+
+    const res = await sendMail({
+      subject: "New Order Placed",
+      text: mailText,
+    });
+
+    if (res?.messageId) {
+      toast.success("Order Placed Successfully.");
+    } else {
+      toast.error("Error Placing Order.");
+    }
   }
+
   return (
     <Form {...form}>
       <form
@@ -82,7 +128,7 @@ export default function PlaceOrderForm() {
                   We will contact here on WhatsApp.
                 </FormDescription>
                 <FormControl>
-                  <Input {...field} type="number" />
+                  <Input {...field} type="number" min={11} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -183,8 +229,9 @@ export default function PlaceOrderForm() {
             )}
           />
         </div>
-        <Button className="w-full" type="submit">
-          Place Order
+        <Button className="w-full gap-2" type="submit" disabled={isLoading}>
+          <span>Place Order</span>
+          {isLoading && <Loader />}
         </Button>
       </form>
     </Form>
