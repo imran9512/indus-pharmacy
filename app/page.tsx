@@ -5,7 +5,6 @@ export default function Home() {
     <main>
       <HeroSection />
       <AllGenres />
-      <div className="flex-1"></div>
     </main>
   );
 }
