@@ -67,7 +67,6 @@ export default function Searchbar({
         >
           {filteredProducts.map((product) => {
             let matchText = "";
-
             if (product.name.toLowerCase().includes(query.toLowerCase())) {
               matchText = product.name;
             } else if (
