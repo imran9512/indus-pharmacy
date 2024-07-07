@@ -5,6 +5,7 @@ import Header from "@/components/gernal/header/header";
 import { Toaster } from "@/components/ui/sonner";
 import Searchbar from "@/components/gernal/header/searchbar";
 import DownBar from "@/components/gernal/header/downbar";
+import Footer from "@/components/gernal/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <>
           <Header />
           {children}
+          <Footer />
           <DownBar />
         </>
         <Toaster richColors />
