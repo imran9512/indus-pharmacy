@@ -1,15 +1,31 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { useCartStore } from "@/stores/useCartStore";
 import { BaggageClaim } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export default function CheckOutButton() {
+export default function CheckOutButton({
+  mobile = false,
+}: {
+  mobile?: boolean;
+}) {
   const { cartItems } = useCartStore();
+  const pathname = usePathname();
   return (
     <Button
       size={"icon"}
-      className="rounded-full bg-[#228be61a] text-[#228be6] hover:bg-[#228be61a]"
+      className={cn(
+        "rounded-full",
+        mobile
+          ? `${
+              pathname !== "/checkout"
+                ? "bg-transparent text-black hover:bg-transparent"
+                : "bg-[#228be61a] text-[#228be6] hover:bg-[#228be61a]"
+            }`
+          : "bg-[#228be61a] text-[#228be6] hover:bg-[#228be61a]"
+      )}
       asChild
     >
       <Link href={"/checkout"} className="relative">

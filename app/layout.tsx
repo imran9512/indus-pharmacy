@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/gernal/header/header";
 import { Toaster } from "@/components/ui/sonner";
 import Searchbar from "@/components/gernal/header/searchbar";
+import DownBar from "@/components/gernal/header/downbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,7 @@ export default function RootLayout({
         <>
           <Header />
           {children}
-          <div className="py-6 bg-white z-50 border-t sticky bottom-0 lg:hidden">
-            <Searchbar mobile className="mx-auto" />
-          </div>
+          <DownBar />
         </>
         <Toaster richColors />
       </body>
