@@ -5,8 +5,15 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { AllProducts } from "@/constants/all-products";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-export default function Searchbar() {
+export default function Searchbar({
+  className,
+  mobile = false,
+}: {
+  className?: string;
+  mobile?: boolean;
+}) {
   const [query, setQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
@@ -39,7 +46,7 @@ export default function Searchbar() {
 
   return (
     <div className="relative">
-      <div className="hidden lg:block max-w-lg mx-5 min-w-96 relative">
+      <div className={cn("max-w-lg mx-5 min-w-96 relative", className)}>
         <div className="bg-[#f1f3f5] w-full">
           <Search className="absolute top-0 left-0 h-full w-4 ml-4" />
           <Input
@@ -49,8 +56,14 @@ export default function Searchbar() {
           />
         </div>
       </div>
+
       {query && (
-        <ol className="absolute top-12 bg-white w-full py-2 max-h-96 overflow-y-auto">
+        <ol
+          className={cn(
+            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-50",
+            mobile ? "bottom-12" : "top-12"
+          )}
+        >
           {filteredProducts.map((product) => {
             let matchText = "";
 

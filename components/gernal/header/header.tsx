@@ -10,7 +10,7 @@ export default function Header() {
           <span>INDUS</span>
           <span>PHARMACY</span>
         </Link>
-        <Searchbar />
+        <Searchbar className="hidden lg:block" />
         <CheckOutButton />
       </div>
     </header>
