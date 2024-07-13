@@ -5,19 +5,27 @@ import { Product } from "@/types/product-schemas";
 type CartStore = {
   cartItems: Product[];
   addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
+  removeFromCart: (productId: number) => void;
+  getProductCount: (productId: number) => number;
 };
 
-export const useCartStore = create<CartStore>((set) => ({
+export const useCartStore = create<CartStore>((set, get) => ({
   cartItems: [],
   addToCart: (product) =>
     set((state) => ({
       cartItems: [...state.cartItems, product],
     })),
   removeFromCart: (productId) =>
-    set((state) => ({
-      cartItems: state.cartItems.filter(
-        (item) => item.id !== Number(productId)
-      ),
-    })),
+    set((state) => {
+      const index = state.cartItems.findIndex((item) => item.id === productId);
+      if (index !== -1) {
+        const updatedCartItems = [...state.cartItems];
+        updatedCartItems.splice(index, 1);
+        return { cartItems: updatedCartItems };
+      }
+      return state;
+    }),
+  getProductCount: (productId) => {
+    return get().cartItems.filter((item) => item.id === productId).length;
+  },
 }));

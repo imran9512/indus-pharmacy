@@ -5,8 +5,16 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { AllProducts } from "@/constants/all-products";
 import Link from "next/link";
-
-export default function Searchbar() {
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { space } from "postcss/lib/list";
+export default function Searchbar({
+  className,
+  mobile = false,
+}: {
+  className?: string;
+  mobile?: boolean;
+}) {
   const [query, setQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
@@ -39,7 +47,7 @@ export default function Searchbar() {
 
   return (
     <div className="relative">
-      <div className="hidden lg:block max-w-lg mx-5 min-w-96 relative">
+      <div className={cn("max-w-lg mx-5 min-w-96 relative", className)}>
         <div className="bg-[#f1f3f5] w-full">
           <Search className="absolute top-0 left-0 h-full w-4 ml-4" />
           <Input
@@ -49,11 +57,16 @@ export default function Searchbar() {
           />
         </div>
       </div>
+
       {query && (
-        <ol className="absolute top-12 bg-white w-full py-2 max-h-96 overflow-y-auto">
+        <ol
+          className={cn(
+            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-50",
+            mobile ? "bottom-12" : "top-12"
+          )}
+        >
           {filteredProducts.map((product) => {
             let matchText = "";
-
             if (product.name.toLowerCase().includes(query.toLowerCase())) {
               matchText = product.name;
             } else if (
@@ -75,7 +88,28 @@ export default function Searchbar() {
                   className="px-4 inline-block py-2 border-b w-full"
                   href={`/products/${product.slug}`}
                 >
-                  {matchText}
+                  <article className="flex items-center" key={product.id}>
+                    <div className="flex gap-x-4 items-center w-full">
+                      <div className="h-20 w-20">
+                        <Image
+                          src={`/assets/products/${product.images[0]}`}
+                          alt={`${product.name} Image`}
+                          width={80}
+                          height={80}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div className="space-y-1">
+                        <p className="text-xs text-zinc-500">{product.brand}</p>
+                        <h5>{product.name}</h5>
+                      </div>
+                      <div className="text-xs ml-auto">
+                        {product.ingredients.map((item, index) => (
+                          <span key={index}>{item} , </span>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
                 </Link>
               </li>
             );

@@ -4,14 +4,32 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { Product } from "@/types/product-schemas";
 import { useCartStore } from "@/stores/useCartStore";
+import { Minus, Plus } from "lucide-react";
 type AddToCartProps = {
   product: Product;
 };
 export default function AddToCart({ product }: AddToCartProps) {
-  const { addToCart, cartItems } = useCartStore();
+  const { addToCart, removeFromCart, cartItems, getProductCount } =
+    useCartStore();
+  const count = getProductCount(product.id);
   return (
     <div className="h-28 flex items-center gap-1">
-      <Button onClick={() => addToCart(product)}>Add To Cart</Button>
+      {count > 0 ? (
+        <div className="flex items-center justify-center bg-zinc-300">
+          <Button onClick={() => removeFromCart(product.id)} size={"icon"}>
+            <Minus />
+          </Button>
+          <p className="px-6 text-xl font-semibold">
+            {count} {count !== 1 ? "Pieces" : "Piece"}
+          </p>
+          <Button onClick={() => addToCart(product)} size={"icon"}>
+            <Plus />
+          </Button>
+        </div>
+      ) : (
+        <Button onClick={() => addToCart(product)}>Add To Cart</Button>
+      )}
+
       <Button asChild className="px-2 bg-green-700 hover:bg-green-700">
         <Link href={"#"}>
           <svg
