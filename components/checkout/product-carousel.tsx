@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-
+import WaterMark from "../watermark";
 export default function ProductCarousel({
   images,
   productName,
@@ -33,6 +33,7 @@ export default function ProductCarousel({
                       height={900}
                       className="h-auto w-auto"
                     />
+                    <WaterMark className="absolute bottom-0 left-2 text-gray-300/90" />
                   </div>
                 </CardContent>
               </Card>
