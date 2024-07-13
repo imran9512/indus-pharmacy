@@ -2,12 +2,12 @@
 import { Input } from "@/components/ui/input";
 import { Product } from "@/types/product-schemas";
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AllProducts } from "@/constants/all-products";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { space } from "postcss/lib/list";
+import { usePathname } from "next/navigation";
 export default function Searchbar({
   className,
   mobile = false,
@@ -15,9 +15,12 @@ export default function Searchbar({
   className?: string;
   mobile?: boolean;
 }) {
+  const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-
+  useEffect(() => {
+    setQuery("");
+  }, [pathname]);
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const value = e.target.value;
     setQuery(value);
