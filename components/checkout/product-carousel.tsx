@@ -25,13 +25,15 @@ export default function ProductCarousel({
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center !p-0">
-                  <Image
-                    src={`/assets/products/${image}`}
-                    alt={`${productName} preview-${index}`}
-                    width={1200}
-                    height={900}
-                    className="h-auto w-auto"
-                  />
+                  <div className="relative">
+                    <Image
+                      src={`/assets/products/${image}`}
+                      alt={`${productName} preview-${index}`}
+                      width={1200}
+                      height={900}
+                      className="h-auto w-auto"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             </div>
