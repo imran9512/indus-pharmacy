@@ -49,8 +49,8 @@ export default function Searchbar({
   }
 
   return (
-    <div className="relative">
-      <div className={cn("max-w-lg mx-5 min-w-96 relative", className)}>
+    <div className={`relative ${mobile ? "flex-1" : ""}`}>
+      <div className={cn("max-w-lg mx-5 lg:min-w-96 relative", className)}>
         <div className="bg-[#f1f3f5] w-full">
           <Search className="absolute top-0 left-0 h-full w-4 ml-4" />
           <Input
