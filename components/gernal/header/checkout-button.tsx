@@ -30,7 +30,7 @@ export default function CheckOutButton({
     >
       <Link href={"/checkout"} className="relative">
         <BaggageClaim className="size-6" />
-        <span className="flex items-center justify-center h-2 w-2 rounded-full bg-[#228be6] text-white p-2 text-sm absolute top-0 -right-2">
+        <span className="flex items-center justify-center h-2 w-2 rounded-full bg-[#228be6] text-white p-2 text-sm absolute top-0 -right-0">
           {cartItems.length}
         </span>
       </Link>
