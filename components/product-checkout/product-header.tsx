@@ -29,7 +29,7 @@ export default function ProductHeader({
           <p className="text-sm">{inStock ? "In Stock" : "Out Of Stock"}</p>
         </div>
       </div>
-      <h4 className="text-2xl font-bold">{productName}</h4>
+      <h4 className="text-2xl font-bold text-[#228be6]">{productName}</h4>
       <p className="text-zinc-600">Rs {price}</p>
       <p className="text-xs text-zinc-600">{quantity}</p>
     </header>

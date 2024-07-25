@@ -18,12 +18,6 @@ export default async function Product({ params }: ProductSlug) {
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-12">
-          <div className="lg:flex-1 lg:basis-1/2 w-full border p-8 rounded-lg">
-            <ProductCarousel
-              images={product.images}
-              productName={product.name}
-            />
-          </div>
           <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto border rounded-lg">
             <ProductHeader
               productName={product?.name}
@@ -56,7 +50,7 @@ export default async function Product({ params }: ProductSlug) {
                   <ol className="flex items-center gap-2">
                     {product.ingredients?.map((ingredient, index) => (
                       <li
-                        className="px-1.5 py-0.5 bg-[#228be61a] text-[#228be6]   max-w-max rounded-full text-xs"
+                        className="px-1.5 py-0.5 bg-[#228be61a] text-[#228be6] max-w-max rounded-full text-xs"
                         key={index}
                       >
                         {ingredient}
@@ -80,6 +74,12 @@ export default async function Product({ params }: ProductSlug) {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="lg:flex-1 lg:basis-1/2 w-full border p-8 rounded-lg">
+            <ProductCarousel
+              images={product.images}
+              productName={product.name}
+            />
           </div>
         </article>
       )}

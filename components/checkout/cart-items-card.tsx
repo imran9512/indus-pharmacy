@@ -23,7 +23,7 @@ export default function CartItems() {
   const groupedItems = Array.from(productCountMap.values());
 
   return (
-    <section className="p-4 border rounded-xl min-w-96">
+    <section className="p-4 border rounded-xl min-w-full lg:min-w-96 order-1 lg:order-2">
       <h1 className="font-bold text-xl">Your Cart</h1>
       <div className="space-y-6 my-6 w-full">
         {groupedItems.map((item, index) => (

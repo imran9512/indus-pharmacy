@@ -97,10 +97,12 @@ export default function PlaceOrderForm() {
   return (
     <Form {...form}>
       <form
-        className="p-4 lg:p-8 border rounded-xl flex-1"
+        className="p-4 lg:p-8 border rounded-xl flex-1 order-2 lg:order-1"
         onSubmit={form.handleSubmit(onsubmit)}
       >
-        <h2 className="text-3xl font-bold mb-12">Delivery Details</h2>
+        <h2 className="text-3xl font-bold mb-12 text-[#228be6]">
+          Delivery Details
+        </h2>
         <div className="flex flex-col gap-4 mb-12">
           <FormField
             control={form.control}
