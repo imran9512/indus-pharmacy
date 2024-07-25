@@ -48,6 +48,23 @@ export default async function Product({ params }: ProductSlug) {
                 <p className="font-semibold text-xs text-zinc-600">Brand</p>
                 <p className="text-xs text-zinc-600">{product.brand}</p>
               </div>
+              {product.ingredients && (
+                <div className="flex flex-col gap-1">
+                  <p className="font-semibold text-xs text-zinc-600">
+                    Ingredients
+                  </p>
+                  <ol className="flex items-center gap-2">
+                    {product.ingredients?.map((ingredient, index) => (
+                      <li
+                        className="px-1.5 py-0.5 bg-[#228be61a] text-[#228be6]   max-w-max rounded-full text-xs"
+                        key={index}
+                      >
+                        {ingredient}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
                   Active Substance

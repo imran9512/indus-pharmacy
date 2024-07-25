@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useState } from "react";
 import { Product } from "@/types/product-schemas";
 import { useCartStore } from "@/stores/useCartStore";
 import { Minus, Plus } from "lucide-react";
@@ -9,8 +8,7 @@ type AddToCartProps = {
   product: Product;
 };
 export default function AddToCart({ product }: AddToCartProps) {
-  const { addToCart, removeFromCart, cartItems, getProductCount } =
-    useCartStore();
+  const { addToCart, removeFromCart, getProductCount } = useCartStore();
   const count = getProductCount(product.id);
   return (
     <div className="h-28 flex items-center gap-1">
