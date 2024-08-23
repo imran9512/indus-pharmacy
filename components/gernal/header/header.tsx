@@ -4,7 +4,7 @@ import CheckOutButton from "./checkout-button";
 
 export default function Header() {
   return (
-    <header className="h-16 items-center justify-center border-b hidden lg:flex">
+    <header className="h-16 items-center justify-center border-b flex">
       <div className="px-4 flex items-center justify-between w-full max-w-screen-xl h-full">
         <Link href={"/"}>
           <span className="text-2xl">
@@ -14,7 +14,7 @@ export default function Header() {
           </span>
         </Link>
         <Searchbar className="hidden lg:block" />
-        <CheckOutButton />
+        <CheckOutButton className="hidden lg:flex" />
       </div>
     </header>
   );
