@@ -38,7 +38,7 @@ export default function CartItems({
   }, [groupedItems]);
 
   return (
-    <section className="p-4 border rounded-xl min-w-full lg:min-w-96 order-1 lg:order-2 sticky top-28">
+    <section className="p-4 border rounded-xl min-w-full lg:min-w-96 order-1 lg:order-2 lg:sticky lg:top-28">
       <h1 className="font-bold text-xl">Your Cart</h1>
       <div className="space-y-6 my-6 w-full">
         {groupedItems.map((item, index) => (

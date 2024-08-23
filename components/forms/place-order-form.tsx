@@ -35,7 +35,7 @@ const formSchema = z.object({
   address: z.string().min(7, { message: "Please Enter Complete Address." }),
   city: z.string().min(2, { message: "Please Enter correct City Name" }),
   additional_info: z.string().optional(),
-  shipping_method: z.enum(["regular", "TCS", "Leopards"]),
+  shipping_method: z.enum(["regular", "TCS", "Leopards"]), //add short words to trigger changings
 });
 export default function PlaceOrderForm({
   setShippingCharges,
@@ -52,7 +52,7 @@ export default function PlaceOrderForm({
       address: "",
       city: "",
       additional_info: "",
-      shipping_method: "regular",
+      shipping_method: "regular", //set default method here
     },
   });
   const { cartItems } = useCartStore();
@@ -106,6 +106,7 @@ export default function PlaceOrderForm({
   }
   const shippingMethod = form.watch().shipping_method;
   useEffect(() => {
+    //set shipping charges conditionally
     if (shippingMethod === "regular") {
       setShippingCharges(0);
     } else if (shippingMethod === "TCS") {
@@ -114,7 +115,6 @@ export default function PlaceOrderForm({
       setShippingCharges(LEPORIDS_SHIPPING_CHARGES);
     }
   }, [shippingMethod]);
-  console.log("form data", shippingMethod, shippingCharges);
   return (
     <Form {...form}>
       <form
@@ -238,6 +238,22 @@ export default function PlaceOrderForm({
                         <FormLabel htmlFor="0">Regular Method</FormLabel>
                       </div>
                     </FormItem>
+                    {/* <FormItem>
+                      <div className="flex items-center gap-2">
+                        <FormControl>
+                          <RadioGroupItem value="abc" id="0" />
+                        </FormControl>
+                        <FormLabel htmlFor="0">ABC</FormLabel>
+                      </div>
+                    </FormItem> */}
+                    {/* <FormItem>
+                      <div className="flex items-center gap-2">
+                        <FormControl>
+                          <RadioGroupItem value="xyz" id="0" />
+                        </FormControl>
+                        <FormLabel htmlFor="0">Regular Method</FormLabel>
+                      </div>
+                    </FormItem> */}
                     <FormItem>
                       <div className="flex items-center gap-2">
                         <FormControl>
