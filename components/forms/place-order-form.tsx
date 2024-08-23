@@ -185,7 +185,7 @@ export default function PlaceOrderForm() {
               </FormItem>
             )}
           />
-          <div>
+          {/* <div>
             <FormLabel>Payment Method</FormLabel>
             <FormDescription>
               More Payment Methods will be coming soon.
@@ -194,7 +194,7 @@ export default function PlaceOrderForm() {
               <RadioGroupItem value="Cash On Delivery" checked />
               <FormLabel>Cash on Delivery</FormLabel>
             </RadioGroup>
-          </div>
+          </div> */}
           <FormField
             control={form.control}
             name="shipping_method"
