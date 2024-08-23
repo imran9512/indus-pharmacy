@@ -19,6 +19,11 @@ import { sendMail } from "@/lib/sendMail";
 import { toast } from "sonner";
 import { Loader } from "lucide-react";
 import { useCartStore } from "@/stores/useCartStore";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import {
+  LEPORIDS_SHIPPING_CHARGES,
+  TCS_SHIPPING_CHARGES,
+} from "@/constants/shipping-charges";
 
 const formSchema = z.object({
   name: z
@@ -32,7 +37,13 @@ const formSchema = z.object({
   additional_info: z.string().optional(),
   shipping_method: z.enum(["TCS", "Leopards"]),
 });
-export default function PlaceOrderForm() {
+export default function PlaceOrderForm({
+  setShippingCharges,
+  shippingCharges,
+}: {
+  setShippingCharges: Dispatch<SetStateAction<number>>;
+  shippingCharges: number;
+}) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -93,7 +104,15 @@ export default function PlaceOrderForm() {
       toast.error("Error Placing Order.");
     }
   }
-
+  const shippingMethod = form.watch().shipping_method;
+  useEffect(() => {
+    setShippingCharges(
+      shippingMethod === "TCS"
+        ? TCS_SHIPPING_CHARGES
+        : LEPORIDS_SHIPPING_CHARGES
+    );
+  }, [shippingMethod]);
+  console.log("form data", shippingMethod, shippingCharges);
   return (
     <Form {...form}>
       <form
@@ -211,7 +230,9 @@ export default function PlaceOrderForm() {
                   >
                     <FormItem>
                       <div className="flex items-center gap-2">
-                        <RadioGroupItem value="TCS" id="1" />
+                        <FormControl>
+                          <RadioGroupItem value="TCS" id="1" />
+                        </FormControl>
                         <FormLabel htmlFor="1">
                           TCS Overnight (2-3 working days)
                         </FormLabel>
@@ -219,7 +240,9 @@ export default function PlaceOrderForm() {
                     </FormItem>
                     <FormItem>
                       <div className="flex items-center gap-2">
-                        <RadioGroupItem value="Leopards" id="2" />
+                        <FormControl>
+                          <RadioGroupItem value="Leopards" id="2" />
+                        </FormControl>
                         <FormLabel htmlFor="2">
                           Leopards Couriers (2-3 working days)
                         </FormLabel>

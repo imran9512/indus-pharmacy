@@ -1,0 +1,2 @@
+export const TCS_SHIPPING_CHARGES = 200;
+export const LEPORIDS_SHIPPING_CHARGES = 300;
