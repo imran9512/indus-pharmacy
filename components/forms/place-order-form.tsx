@@ -35,7 +35,7 @@ const formSchema = z.object({
   address: z.string().min(7, { message: "Please Enter Complete Address." }),
   city: z.string().min(2, { message: "Please Enter correct City Name" }),
   additional_info: z.string().optional(),
-  shipping_method: z.enum(["TCS", "Leopards"]),
+  shipping_method: z.enum(["regular", "TCS", "Leopards"]),
 });
 export default function PlaceOrderForm({
   setShippingCharges,
@@ -52,7 +52,7 @@ export default function PlaceOrderForm({
       address: "",
       city: "",
       additional_info: "",
-      shipping_method: "TCS",
+      shipping_method: "regular",
     },
   });
   const { cartItems } = useCartStore();
@@ -106,11 +106,13 @@ export default function PlaceOrderForm({
   }
   const shippingMethod = form.watch().shipping_method;
   useEffect(() => {
-    setShippingCharges(
-      shippingMethod === "TCS"
-        ? TCS_SHIPPING_CHARGES
-        : LEPORIDS_SHIPPING_CHARGES
-    );
+    if (shippingMethod === "regular") {
+      setShippingCharges(0);
+    } else if (shippingMethod === "TCS") {
+      setShippingCharges(TCS_SHIPPING_CHARGES);
+    } else if (shippingMethod === "Leopards") {
+      setShippingCharges(LEPORIDS_SHIPPING_CHARGES);
+    }
   }, [shippingMethod]);
   console.log("form data", shippingMethod, shippingCharges);
   return (
@@ -228,6 +230,14 @@ export default function PlaceOrderForm({
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
+                    <FormItem>
+                      <div className="flex items-center gap-2">
+                        <FormControl>
+                          <RadioGroupItem value="regular" id="0" />
+                        </FormControl>
+                        <FormLabel htmlFor="0">Regular Method</FormLabel>
+                      </div>
+                    </FormItem>
                     <FormItem>
                       <div className="flex items-center gap-2">
                         <FormControl>
