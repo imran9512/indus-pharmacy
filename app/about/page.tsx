@@ -1,3 +1,5 @@
 export default function About() {
-  return <main></main>;
+  return <main>
+  All about malesort.com
+  </main>;
 }
