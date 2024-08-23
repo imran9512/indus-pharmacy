@@ -18,7 +18,7 @@ export default async function Product({ params }: ProductSlug) {
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
-          <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto border rounded-lg order-2 lg:order-1">
+          <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto rounded-lg order-2">
             <ProductHeader
               productName={product?.name}
               inStock={product?.in_stock}
@@ -75,7 +75,7 @@ export default async function Product({ params }: ProductSlug) {
               </div>
             </div>
           </div>
-          <div className="lg:flex-1 lg:basis-1/2 w-full border rounded-lg order-1 lg:order-2">
+          <div className="lg:flex-1 lg:basis-1/2 w-full rounded-lg order-1">
             <ProductCarousel
               images={product.images}
               productName={product.name}
