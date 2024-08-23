@@ -25,7 +25,9 @@ export default function AddToCart({ product }: AddToCartProps) {
           </Button>
         </div>
       ) : (
-        <Button onClick={() => addToCart(product)}>Add To Cart</Button>
+        <Button disabled={!product.in_stock} onClick={() => addToCart(product)}>
+          Add To Cart
+        </Button>
       )}
 
       <Button asChild className="px-2 bg-green-700 hover:bg-green-700">

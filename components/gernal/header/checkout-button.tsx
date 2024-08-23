@@ -8,8 +8,10 @@ import { usePathname } from "next/navigation";
 
 export default function CheckOutButton({
   mobile = false,
+  className,
 }: {
   mobile?: boolean;
+  className?: string;
 }) {
   const { cartItems } = useCartStore();
   const pathname = usePathname();
@@ -18,6 +20,7 @@ export default function CheckOutButton({
       size={"icon"}
       className={cn(
         "rounded-full",
+        className,
         mobile
           ? `${
               pathname !== "/checkout"
