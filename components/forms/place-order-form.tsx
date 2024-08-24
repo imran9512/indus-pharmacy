@@ -60,10 +60,8 @@ export default function PlaceOrderForm({
   const isLoading = form.formState.isSubmitting;
   async function onsubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-
     const productCountMap = new Map();
     let totalPrice = 0;
-
     cartItems.forEach((item) => {
       if (productCountMap.has(item.id)) {
         productCountMap.set(item.id, {
@@ -82,7 +80,9 @@ export default function PlaceOrderForm({
         item.price
       } x ${item.count} = ${item.price * item.count} PKR\n`;
     });
-    orderDetails += `Total Price: ${totalPrice} PKR\n`;
+    orderDetails += `Shipping Charges: ${shippingCharges}\nTotal Price: ${
+      totalPrice + shippingCharges
+    } PKR\n`;
 
     const mailText = `
       Name: ${values.name}
