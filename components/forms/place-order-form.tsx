@@ -99,6 +99,7 @@ export default function PlaceOrderForm({
     });
 
     if (res?.messageId) {
+      form.reset();
       toast.success("Order Placed Successfully.");
     } else {
       toast.error("Error Placing Order.");
