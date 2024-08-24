@@ -1,5 +1,4 @@
 "use client";
-
 import { Plus, Trash, Minus } from "lucide-react";
 import { Button } from "../ui/button";
 import { useCartStore } from "@/stores/useCartStore";
@@ -14,7 +13,6 @@ export default function CartItems({
 }) {
   const { cartItems, addToCart, removeFromCart } = useCartStore();
   const [totalPrice, setTotalPrice] = useState(0);
-
   // Group items by their ID and calculate the count for each
   const productCountMap = new Map();
   cartItems.forEach((item) => {
@@ -28,7 +26,6 @@ export default function CartItems({
     }
   });
   const groupedItems = Array.from(productCountMap.values());
-
   // Calculate total price whenever groupedItems change
   useEffect(() => {
     const newTotalPrice = groupedItems.reduce(
@@ -37,7 +34,6 @@ export default function CartItems({
     );
     setTotalPrice(newTotalPrice);
   }, [groupedItems]);
-
   return (
     <section className="p-4 border rounded-xl min-w-full lg:min-w-96 order-1 lg:order-2 lg:sticky lg:top-28">
       <h1 className="font-bold text-xl">Your Cart</h1>
