@@ -56,6 +56,7 @@ export default function Searchbar({
           <Input
             className="bg-transparent border border-none focus:border-[#228be6] focus:ring-0 focus-within:ring-0 w-full px-10"
             onChange={handleChange}
+            value={query}
             placeholder="Search"
           />
         </div>
@@ -64,7 +65,7 @@ export default function Searchbar({
       {query && (
         <ol
           className={cn(
-            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-50",
+            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-[100]",
             mobile ? "bottom-12" : "top-12"
           )}
         >

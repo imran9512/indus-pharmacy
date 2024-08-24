@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Product } from "@/types/product-schemas";
 import { useCartStore } from "@/stores/useCartStore";
 import { Minus, Plus } from "lucide-react";
+import { WHATSAPP_LINK } from "@/constants/contact-links";
 type AddToCartProps = {
   product: Product;
 };
@@ -31,7 +32,7 @@ export default function AddToCart({ product }: AddToCartProps) {
       )}
 
       <Button asChild className="px-2 bg-green-700 hover:bg-green-700">
-        <Link href={"#"}>
+        <Link href={WHATSAPP_LINK}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

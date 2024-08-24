@@ -1,10 +1,10 @@
 "use client";
-
 import { Plus, Trash, Minus } from "lucide-react";
 import { Button } from "../ui/button";
 import { useCartStore } from "@/stores/useCartStore";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function CartItems({
   shippingCharges,
@@ -13,7 +13,6 @@ export default function CartItems({
 }) {
   const { cartItems, addToCart, removeFromCart } = useCartStore();
   const [totalPrice, setTotalPrice] = useState(0);
-
   // Group items by their ID and calculate the count for each
   const productCountMap = new Map();
   cartItems.forEach((item) => {
@@ -27,7 +26,6 @@ export default function CartItems({
     }
   });
   const groupedItems = Array.from(productCountMap.values());
-
   // Calculate total price whenever groupedItems change
   useEffect(() => {
     const newTotalPrice = groupedItems.reduce(
@@ -36,7 +34,6 @@ export default function CartItems({
     );
     setTotalPrice(newTotalPrice);
   }, [groupedItems]);
-
   return (
     <section className="p-4 border rounded-xl min-w-full lg:min-w-96 order-1 lg:order-2 lg:sticky lg:top-28">
       <h1 className="font-bold text-xl">Your Cart</h1>
@@ -55,7 +52,9 @@ export default function CartItems({
               </div>
               <div className="space-y-1">
                 <p className="text-xs text-zinc-500">{item.brand}</p>
-                <h5>{item.name}</h5>
+                <h5>
+                  <Link href={`/products/${item.slug}`}>{item.name}</Link>
+                </h5>
                 <p className="text-xs text-zinc-500">{item.amount}</p>
                 <p className="text-xs text-zinc-700">
                   {item.price} x {item.count} = Rs. {item.price * item.count}
