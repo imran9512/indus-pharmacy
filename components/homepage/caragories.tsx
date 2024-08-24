@@ -11,7 +11,7 @@ export default function Categories() {
           <Link
             key={catagory.slug}
             href={`/catagories/${catagory.slug}`}
-            className="text-xl lg:text-2xl font-bold p-4 border text-center rounded-xl shadow-md"
+            className="text-sm lg:text-2xl font-bold p-4 border text-center rounded-xl shadow-md"
           >
             {catagory.main_catagory}
           </Link>
