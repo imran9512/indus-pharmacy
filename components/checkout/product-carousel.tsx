@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -33,6 +34,7 @@ export default function ProductCarousel({
       </CarouselContent>
       <CarouselPrevious className="hidden lg:flex" />
       <CarouselNext className="hidden lg:flex" />
+      <CarouselDots className="lg:hidden" />
     </Carousel>
   );
 }
