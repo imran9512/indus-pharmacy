@@ -55,8 +55,7 @@ export default function PlaceOrderForm({
       shipping_method: "regular", //set default method here
     },
   });
-  const { cartItems } = useCartStore();
-  console.log(cartItems);
+  const { cartItems, resetCart } = useCartStore();
   const isLoading = form.formState.isSubmitting;
   async function onsubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
@@ -100,6 +99,7 @@ export default function PlaceOrderForm({
 
     if (res?.messageId) {
       form.reset();
+      resetCart();
       toast.success("Order Placed Successfully.");
     } else {
       toast.error("Error Placing Order.");

@@ -7,6 +7,7 @@ type CartStore = {
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
   getProductCount: (productId: number) => number;
+  resetCart: () => void; // new method
 };
 
 export const useCartStore = create<CartStore>((set, get) => ({
@@ -28,4 +29,5 @@ export const useCartStore = create<CartStore>((set, get) => ({
   getProductCount: (productId) => {
     return get().cartItems.filter((item) => item.id === productId).length;
   },
+  resetCart: () => set({ cartItems: [] }), // new method implementation
 }));
