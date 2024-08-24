@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { useCartStore } from "@/stores/useCartStore";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function CartItems({
   shippingCharges,
@@ -55,7 +56,9 @@ export default function CartItems({
               </div>
               <div className="space-y-1">
                 <p className="text-xs text-zinc-500">{item.brand}</p>
-                <h5>{item.name}</h5>
+                <h5>
+                  <Link href={`/products/${item.slug}`}>{item.name}</Link>
+                </h5>
                 <p className="text-xs text-zinc-500">{item.amount}</p>
                 <p className="text-xs text-zinc-700">
                   {item.price} x {item.count} = Rs. {item.price * item.count}
