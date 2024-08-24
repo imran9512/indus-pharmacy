@@ -65,7 +65,7 @@ export default function Searchbar({
       {query && (
         <ol
           className={cn(
-            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-50",
+            "absolute bg-white w-full py-2 max-h-96 overflow-y-auto z-[100]",
             mobile ? "bottom-12" : "top-12"
           )}
         >
