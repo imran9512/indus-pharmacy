@@ -11,7 +11,7 @@ export const AllProducts: AllProductsType = [
     description: `Ritalin 10mg is use to trat ADHD in humen`,
     made_in: "Spain",
     imported_from: "Spain",
-    active_substances: ["Methylphenidate"],
+    active_substances: ["Methylphenidate"] , ["check"],
     additional_info: `main article here1234.`,
     in_stock: true,
     images: [
