@@ -6,7 +6,7 @@ export const AllProducts: AllProductsType = [
     name: "Ritalin 10mg",
     slug: "buy-Ritalin-10mg-price-in-pakistan",
     brand: "Novartis",
-    ingredients: ["Methylphenidate"], ["XYZ"],
+    ingredients: ["Methylphenidate" , "XYZ"],
     price: 6850,
     description: `Ritalin 10mg is use to trat ADHD in humen`,
     made_in: "Spain",
