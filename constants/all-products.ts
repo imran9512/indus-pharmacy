@@ -3,7 +3,7 @@ import type { AllProductsType } from "@/types/product-schemas";
 export const AllProducts: AllProductsType = [
   {
     id: 1,
-    name: "Product 1",
+    name: "Product 101",
     slug: "product1",
     brand: "Sartaj Pharma",
     ingredients: [""],
@@ -35,7 +35,7 @@ export const AllProducts: AllProductsType = [
   },
   {
     id: 2,
-    name: "product 2",
+    name: "product 202",
     slug: "product2",
     brand: "Sartaj Pharma",
     ingredients: [""],
