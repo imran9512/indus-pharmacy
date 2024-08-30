@@ -12,7 +12,7 @@ export const AllProducts: AllProductsType = [
     made_in: "Made in Spain",
     imported_from: "Spain",
     active_substances: ["Methylphenidate"],
-    additional_info: "main article here",
+    additional_info: "main article here1234",
     in_stock: "true",
     images: [
       "p5.jpg",
