@@ -13,7 +13,7 @@ export const AllProducts: AllProductsType = [
     imported_from: "Spain",
     active_substances: ["Methylphenidate"],
     additional_info: "main article here",
-    in_stock: "TRUE",
+    in_stock: "true",
     images: [
       "p5.jpg",
       "p6.jpg",
@@ -21,7 +21,7 @@ export const AllProducts: AllProductsType = [
       "p8.jpg",
     ],
     amount: "30 tablet per pack",
-    catagories: ["Cat-2" , "Cat-3" , "Cat-4" ],
+    catagories: ["Alcohol Dependence", "Panic Disorder", "Drug Addiction" ],
     reviews: [
       {
         reviewer_name: "khawar khan",
