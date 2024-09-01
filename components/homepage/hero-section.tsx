@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section style="height: 70vh;" className="h-screen relative flex items-center justify-center px-4" >
+    <section className="h-screen relative flex items-center justify-center px-4">
       <Image
         src={"/assets/common/background.png"}
         alt="Background"
