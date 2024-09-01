@@ -1,25 +1,32 @@
 export const AllCatagories: Category[] = [
   {
-    main_catagory: "Addiction Treatment",
-    slug: "addiction-treatment",
+    main_catagory: "ADHD",
+    slug: "ADHD-treatment-in-Pakistan",
     sub_catagories: [
-      "Alcohol Dependence",
-      "Drug Addiction",
-      "Gambling Addiction",
+      ""
     ],
   },
   {
-    main_catagory: "Anxiety",
-    slug: "anxiety",
+    main_catagory: "Delay",
+    slug: "premature-ejaculation-treatment",
     sub_catagories: [
-      "Generalized Anxiety Disorder",
-      "Panic Disorder",
-      "Social Anxiety Disorder",
+      "Sprays",
+      "Tablets",
     ],
   },
   {
-    main_catagory: "Women's Health",
-    slug: "womens-health",
-    sub_catagories: ["Menstrual Disorders", "Menopause"],
+    main_catagory: "ED Treatment",
+    slug: "erectile-dysfunction-treatment-in-pakistan",
+    sub_catagories: [
+      "Viagra",
+      "Cialis",
+      "Levitra",
+    ],
+  },
+  {
+    main_catagory: "Others",
+    slug: "women-health-care",
+    sub_catagories: [""
+    ],
   },
 ];
