@@ -11,7 +11,7 @@ export default function HeroSection() {
         className="h-full w-full absolute"
       />
       <div className="z-50 max-w-2xl text-center">
-        <h1 className="text-7xl font-bold mb-6">Headline Here</h1>
+        <h1 className="text-7xl font-bold mb-6">Empowering Wellbeing for Men and Women</h1>
         <p className="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor
           repellendus ut beatae odio. Repellendus, voluptates reiciendis, eius
