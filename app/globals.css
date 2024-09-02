@@ -2,3 +2,7 @@
   @tailwind components;
   @tailwind utilities;
   
+.py-6 {
+    padding-top: 1.0rem !important;
+    padding-bottom: 1.0rem !important;
+}
