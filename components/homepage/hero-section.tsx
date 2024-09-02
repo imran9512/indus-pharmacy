@@ -12,7 +12,7 @@ export default function HeroSection() {
       />
       <div className="z-50 max-w-2xl text-center">
         <h1 className="text-3xl font-bold mb-6">Empowering Wellbeing for Men and Women</h1>
-        <p className="text-lg" style={{ fontSize: '75%' }}>
+        <p className="text-lg text-smaller-mobile">
           🌿 Welcome to MaleSort is your one-stop shop for addressing a variety of personal health concerns. 
           We understand that intimate health can be a delicate topic, and we&#39;re here to provide discreet and reliable resources 
           to help you feel your best. Our comprehensive selection of products caters to both men&#39;s and women&#39;s needs, 
