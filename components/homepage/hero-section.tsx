@@ -14,9 +14,9 @@ export default function HeroSection() {
         <h1 className="text-3xl font-bold mb-6">Empowering Wellbeing for Men and Women</h1>
         <p className="text-lg">`&#39;`
           Welcome to MaleSort is your one-stop shop for addressing a variety of personal health concerns. 
-          We understand that intimate health can be a delicate topic, and we're here to provide discreet and reliable resources 
-          to help you feel your best. Our comprehensive selection of products caters to both men's and women's needs, 
-          focusing on overall well-being. Whether you're seeking solutions for common issues like erectile dysfunction ED or 
+          `&#39;`We understand that intimate health can be a delicate topic, and we're here to provide discreet and reliable resources `&#39;`
+          `&#39;`to help you feel your best. Our comprehensive selection of products caters to both men's and women's needs,`&#39;` 
+          `&#39;`focusing on overall well-being. Whether you're seeking solutions for common issues like erectile dysfunction ED or`&#39;` 
           premature ejaculation PE, or exploring options for family planning, we offer a range of high-quality products to 
           support your health journey. We prioritize discretion and privacy. Our platform allows you to browse and purchase 
           products comfortably, with secure payment options and fast, confidential shipping. Malesort.com is committed to 
