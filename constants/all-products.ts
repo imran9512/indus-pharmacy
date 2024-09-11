@@ -12,7 +12,7 @@ export const AllProducts: AllProductsType = [
     made_in: "Spain",
     imported_from: "USA",
     active_substances: ["Methylphenidate"],
-    additional_info: `main article here`,
+    additional_info: `Ritalin is use to treat ADHD in human`,
     in_stock: true,
     images: [
       "p1.jpg",
