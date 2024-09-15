@@ -15,10 +15,9 @@ export const AllProducts: AllProductsType = [
     additional_info: `Ritalin is use to treat ADHD in human`,
     in_stock: true,
     images: [
-      "p1.jpg",
-      "p2.jpg",
-      "p3.jpg",
-      "p4.jpg",
+      "Ritalin 10 - Methylph.jpg",
+      "Ritalin 10 - Methylph 2.jpg",
+      "Ritalin 10 - Methylph 3.jpg",
     ],
     amount: "30 tablet per pack",
     catagories: ["ADHD" , "" , "" ],
