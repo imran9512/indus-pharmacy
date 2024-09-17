@@ -20,7 +20,7 @@ export const AllProducts: AllProductsType = [
       "Ritalin 10 - Methylph 3.jpg",
     ],
     amount: "30 tablet per pack",
-    catagories: ["ADHD" , "" , "" ],
+    catagories: ["ADHD" ],
     reviews: [
       {
         reviewer_name: "khawar khan",
@@ -43,9 +43,9 @@ export const AllProducts: AllProductsType = [
       additional_info: `main article here`,
       in_stock: true,
       images: [
-        "Vyas 70mg 30cap 1",
-        "Vyas 70mg 30cap 2",
-        "Vyas 70mg 30cap 3",
+        "Vyas 70mg 30cap 1.jpg",
+        "Vyas 70mg 30cap 2.jpg",
+        "Vyas 70mg 30cap 3.jpg",
       ],
       amount: "30 capsule / pack",
       catagories: ["ADHD" ],
