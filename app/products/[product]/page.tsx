@@ -23,7 +23,6 @@ export default async function Product({ params }: ProductSlug) {
       "@type": "Brand",
       name: product.brand,
     },
-    sku: product.sku || "", // Provide a fallback
     offers: {
       "@type": "Offer",
       url: window.location.href,
