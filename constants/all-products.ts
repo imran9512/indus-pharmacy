@@ -4,6 +4,7 @@ export const AllProducts: AllProductsType = [
   {
     id: 1,     
     name: "Ritalin 10mg",
+    sku: "rt10",
     slug: "buy-Ritalin-10mg-price-in-pakistan",
     brand: "Novartis",
     ingredients: ["Methylphenidate"],
@@ -32,6 +33,7 @@ export const AllProducts: AllProductsType = [
     {
       id: 2,     
       name: "Vyas 70mg",
+      sku: "vy70",
       slug: "Lisdexamfetamine-70mg-price-in-pakistan",
       brand: "Tekaje",
       ingredients: ["Lisdexamfetamine"],
