@@ -62,9 +62,11 @@ export default async function Product({ params }: ProductSlug) {
     notFound();
   }
 
-
-  // Generate structured data
-  const structuredData = generateStructuredData(product);
+// Generate structured data only if product is defined
+let structuredData = null;
+if (product) {
+  structuredData = generateStructuredData(product);
+}
 
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
