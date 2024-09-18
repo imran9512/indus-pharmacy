@@ -33,7 +33,7 @@ export default function ProductHeader({
       </div>
       <h2 className="text-2xl font-bold text-[#228be6]">{productName}</h2>
       <p className="text-zinc-600">SKU {sku}</p>
-      <p className="text-zinc-600">Rs {price}</p>
+      <h4 className="text-zinc-600">Rs {price}</h4>
       <p className="text-xs text-zinc-600">{quantity}</p>
     </header>
   );
