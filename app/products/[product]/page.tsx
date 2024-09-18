@@ -30,12 +30,7 @@ export default async function Product({ params }: ProductSlug) {
             />
             <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
-            <div className="space-y-6">
-            <div>
-                <p className="font-semibold text-xs text-zinc-600">SKU</p>
-                <p className="text-xs text-zinc-600">{product.sku}</p>
-              </div>
-              <div>
+            <div className="space-y-6">              <div>
                 <p className="font-semibold text-xs text-zinc-600">Origin</p>
                 <p className="text-xs text-zinc-600">
                   {product.imported_from.toLowerCase() ===

@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 
 type ProductHeaderType = {
   brandName: string;
-  sku: string;
   inStock?: boolean;
   productName: string;
   price: number;
@@ -10,7 +9,6 @@ type ProductHeaderType = {
 };
 export default function ProductHeader({
   brandName,
-  sku,
   inStock = true,
   productName,
   price,
@@ -32,7 +30,6 @@ export default function ProductHeader({
         </div>
       </div>
       <h2 className="text-2xl font-bold text-[#228be6]">{productName}</h2>
-      <p className="text-zinc-600">{sku}</p>
       <p className="text-zinc-600">Rs {price}</p>
       <p className="text-xs text-zinc-600">{quantity}</p>
     </header>
