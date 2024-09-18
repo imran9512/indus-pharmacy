@@ -62,13 +62,13 @@ export default async function Product({ params }: ProductSlug) {
               )}
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
-                  Active Substance
+                  Alternatives
                 </p>
-                <p className="text-xs text-zinc-600">Temozokomide</p>
+                <p className="text-xs text-zinc-600">Not Working</p>
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
-                  Additional Information
+                  Product Information and Usage
                 </p>
                 <p className="text-xs text-zinc-600">
                   {product.additional_info}
