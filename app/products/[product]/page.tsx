@@ -4,11 +4,35 @@ import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
 import { notFound } from "next/navigation";
 
+
+type Product = {
+  id: number;
+  name: string;
+  slug: string;
+  brand: string;
+  ingredients: string[];
+  price: number;
+  description: string;
+  made_in: string;
+  imported_from: string;
+  active_substances: string[];
+  additional_info: string;
+  in_stock: boolean;
+  images: string[];
+  amount: string;
+  categories: string[];
+  reviews: {
+    reviewer_name: string;
+    review_text: string;
+    stars: number;
+  }[];
+};
+
 type ProductSlug = {
   params: { product: string };
 };
 
-function generateStructuredData(productrich) {
+function generateStructuredData(product: Product) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -40,7 +64,7 @@ export default async function Product({ params }: ProductSlug) {
 
 
   // Generate structured data
-  const structuredData = generateStructuredData(productrich);
+  const structuredData = generateStructuredData(product);
 
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
