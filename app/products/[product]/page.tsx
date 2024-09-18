@@ -14,27 +14,6 @@ export default async function Product({ params }: ProductSlug) {
     notFound();
   }
 
-  const structuredData = product ? {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    brand: {
-      "@type": "Brand",
-      name: product.brand,
-    },
-    offers: {
-      "@type": "Offer",
-      url: window.location.href,
-      priceCurrency: "PKR", // Change according to your currency
-      price: product.price || 0,
-      itemCondition: "https://schema.org/NewCondition",
-      availability: "https://schema.org/InStock",
-    },
-    image: product.images[0] || "", // Fallback if images is empty
-  } : null;
-
-
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
       {product && (
