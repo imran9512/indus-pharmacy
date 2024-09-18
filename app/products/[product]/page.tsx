@@ -64,7 +64,7 @@ export default async function Product({ params }: ProductSlug) {
                 <p className="font-semibold text-xs text-zinc-600">
                   Alternatives
                 </p>
-                <p className="text-xs text-zinc-600">Not Working</p>
+                <p className="text-xs text-zinc-600">{product.active_substances}</p>
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
