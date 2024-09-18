@@ -4,56 +4,9 @@ import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
 import { notFound } from "next/navigation";
 
-
-type Product = {
-  id: number;
-  name: string;
-  slug: string;
-  brand: string;
-  ingredients: string[];
-  price: number;
-  description: string;
-  made_in: string;
-  imported_from: string;
-  active_substances: string[];
-  additional_info: string;
-  in_stock: boolean;
-  images: string[];
-  amount: string;
-  categories: string[];
-  reviews: {
-    reviewer_name: string;
-    review_text: string;
-    stars: number;
-  }[];
-};
-
 type ProductSlug = {
   params: { product: string };
 };
-
-function generateStructuredData(product: Product) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    brand: {
-      "@type": "Brand",
-      name: product.brand,
-    },
-    sku: product.slug, // Using slug as SKU
-    offers: {
-      "@type": "Offer",
-      url: window.location.href,
-      priceCurrency: "PKR", // Change according to your currency
-      price: product.price,
-      itemCondition: "https://schema.org/NewCondition",
-      availability: "https://schema.org/InStock",
-    },
-    image: product.images[0] || "", // Main image with fallback
-  };
-}
 
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
@@ -61,12 +14,6 @@ export default async function Product({ params }: ProductSlug) {
   if (!productSlug) {
     notFound();
   }
-
-// Generate structured data only if product is defined
-let structuredData = null;
-if (product) {
-  structuredData = generateStructuredData(product);
-}
 
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
@@ -76,6 +23,7 @@ if (product) {
             {/* xl:fixed xl:top-20 xl:right-20 2xl:right-58 3xl:right-60 4xl:right-80 5xl:right-96 */}
             <ProductHeader
               productName={product?.name}
+              sku={product.sku}
               inStock={product?.in_stock}
               price={product.price}
               quantity={product.amount}
@@ -118,7 +66,7 @@ if (product) {
                 <p className="font-semibold text-xs text-zinc-600">
                   Alternatives
                 </p>
-                <p className="text-xs text-zinc-600">{product.active_substances}</p>
+                <p className="text-xs text-zinc-600">{product.alternatives}</p>
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
@@ -137,10 +85,6 @@ if (product) {
             />
           </div>
         </article>
-      )}
-      {/* Render structured data */}
-      {structuredData && (
-        <div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       )}
     </main>
   );

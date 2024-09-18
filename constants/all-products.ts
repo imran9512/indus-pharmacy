@@ -12,7 +12,7 @@ export const AllProducts: AllProductsType = [
     description: `Ritalin 10mg is use to trat ADHD in humen`,
     made_in: "Spain",
     imported_from: "USA",
-    active_substances: ["Methylphenidate"],
+    alternatives: ["Methylphenidate"],
     additional_info: `Ritalin is use to treat ADHD in human`,
     in_stock: true,
     images: [
@@ -40,7 +40,7 @@ export const AllProducts: AllProductsType = [
       description: `Lisdexamfetamine treats ADHD and binge eating disorder by boosting neurotransmitter levels, enhancing focus and control. It provides a steady effect with lower abuse potential, working by increasing dopamine and norepinephrine in the brain.`,
       made_in: "Iran",
       imported_from: "UAE",
-      active_substances: ["Lisdexamfetamine"],
+      alternatives: ["Lisdexamfetamine"],
       additional_info: `main article here`,
       in_stock: true,
       images: [

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 type ProductHeaderType = {
   brandName: string;
+  sku: string;
   inStock?: boolean;
   productName: string;
   price: number;
@@ -9,6 +10,7 @@ type ProductHeaderType = {
 };
 export default function ProductHeader({
   brandName,
+  sku,
   inStock = true,
   productName,
   price,
