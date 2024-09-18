@@ -4,11 +4,13 @@ type ProductHeaderType = {
   brandName: string;
   inStock?: boolean;
   productName: string;
+  sku: string;
   price: number;
   quantity: string;
 };
 export default function ProductHeader({
   brandName,
+  sku,
   inStock = true,
   productName,
   price,
@@ -30,6 +32,7 @@ export default function ProductHeader({
         </div>
       </div>
       <h2 className="text-2xl font-bold text-[#228be6]">{productName}</h2>
+      <p className="text-zinc-600">SKU {sku}</p>
       <p className="text-zinc-600">Rs {price}</p>
       <p className="text-xs text-zinc-600">{quantity}</p>
     </header>

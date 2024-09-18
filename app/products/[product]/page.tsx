@@ -23,6 +23,7 @@ export default async function Product({ params }: ProductSlug) {
             {/* xl:fixed xl:top-20 xl:right-20 2xl:right-58 3xl:right-60 4xl:right-80 5xl:right-96 */}
             <ProductHeader
               productName={product?.name}
+              sku={product.sku}
               inStock={product?.in_stock}
               price={product.price}
               quantity={product.amount}
