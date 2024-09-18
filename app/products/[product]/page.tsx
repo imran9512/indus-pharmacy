@@ -136,6 +136,10 @@ export default async function Product({ params }: ProductSlug) {
           </div>
         </article>
       )}
+      {/* Render structured data */}
+      {structuredData && (
+        <div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      )}
     </main>
   );
 }
