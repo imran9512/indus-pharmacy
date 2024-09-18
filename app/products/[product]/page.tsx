@@ -8,7 +8,7 @@ type ProductSlug = {
   params: { product: string };
 };
 
-function generateStructuredData(product) {
+function generateStructuredData(productrich) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -40,7 +40,7 @@ export default async function Product({ params }: ProductSlug) {
 
 
   // Generate structured data
-  const structuredData = generateStructuredData(product);
+  const structuredData = generateStructuredData(productrich);
 
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
