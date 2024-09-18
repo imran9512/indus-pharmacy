@@ -7,12 +7,40 @@ import { notFound } from "next/navigation";
 type ProductSlug = {
   params: { product: string };
 };
+
+function generateStructuredData(product) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    brand: {
+      "@type": "Brand",
+      name: product.brand,
+    },
+    sku: product.slug, // Using slug as SKU
+    offers: {
+      "@type": "Offer",
+      url: window.location.href,
+      priceCurrency: "PKR", // Change according to your currency
+      price: product.price,
+      itemCondition: "https://schema.org/NewCondition",
+      availability: "https://schema.org/InStock",
+    },
+    image: product.images[0] || "", // Main image with fallback
+  };
+}
+
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
   if (!productSlug) {
     notFound();
   }
+
+
+  // Generate structured data
+  const structuredData = generateStructuredData(product);
 
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
