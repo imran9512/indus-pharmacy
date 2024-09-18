@@ -19,7 +19,7 @@ export default async function Product({ params }: ProductSlug) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: productName={product.name},
+    name: productName={product?.name},
     description: product.description,
     brand: {
       "@type": "Brand",
@@ -29,7 +29,7 @@ export default async function Product({ params }: ProductSlug) {
     offers: {
       "@type": "Offer",
       url: window.location.href,
-      priceCurrency: "USD", // Change this according to your currency
+      priceCurrency: "PKR", // Change this according to your currency
       price: product.price,
       itemCondition: "https://schema.org/NewCondition",
       availability: "https://schema.org/InStock",
