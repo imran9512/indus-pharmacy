@@ -19,7 +19,7 @@ export default async function Product({ params }: ProductSlug) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: productName={product.name};,
+    name: productName={product,name};,
     description: product.description,
     brand: {
       "@type": "Brand",
