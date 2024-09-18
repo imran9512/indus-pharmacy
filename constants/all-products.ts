@@ -34,6 +34,7 @@ export const AllProducts: AllProductsType = [
       id: 2,     
       name: "Vyas 70mg",
       slug: "Lisdexamfetamine-70mg-price-in-pakistan",
+      sku: "Vyas70",
       brand: "Tekaje",
       ingredients: ["Lisdexamfetamine"],
       price: 19950,
