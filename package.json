@@ -1,15 +1,12 @@
 {
   "name": "pharmacy",
-  "version": "0.1.0",
+  "version": "0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  },
-  "scripts": {
-  "postbuild": "next-sitemap"
   }
   "dependencies": {
     "@hookform/resolvers": "^3.8.0",
