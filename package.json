@@ -1,9 +1,8 @@
 {
-  {
   "name": "pharmacy",
-  "version": "1",
+  "version": "{1}",
   "private": true,
-}
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
