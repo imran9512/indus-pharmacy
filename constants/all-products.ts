@@ -4,12 +4,12 @@ export const AllProducts: AllProductsType = [
   {
     id: 1,     
     name: "Ritalin 10mg",
-    sku: "rt10",
     slug: "buy-Ritalin-10mg-price-in-pakistan",
+    sku: "RT10",
     brand: "Novartis",
     ingredients: ["Methylphenidate"],
     price: 6850,
-    description: `Ritalin 10mg is use to trat ADHD in humen`,
+    description: `Ritalin, used for treating ADHD, enhances focus and impulse control by increasing dopamine and norepinephrine levels in the brain. It provides effective symptom management and is available in various formulations, including immediate and extended-release, to suit individual needs.`,
     made_in: "Spain",
     imported_from: "USA",
     active_substances: ["Methylphenidate"],
@@ -25,11 +25,22 @@ export const AllProducts: AllProductsType = [
     reviews: [
       {
         reviewer_name: "khawar khan",
-        review_text: "The best product for ADHD",
-        stars: 4,
+        review_text: "Thank you for making methylphenidate available in Pakistan! This product has truly transformed my focus and productivity. I’m grateful for the positive impact it’s had on my life.",
+        stars: 5,
       },
-     ],
-    },
+      {
+        reviewer_name: "Imtyaz Raza",
+        review_text: "I highly recommend methylphenidate for anyone struggling with ADHD. It has significantly improved my concentration and daily functioning. Don’t hesitate to give it a try.",
+        stars: 5,
+      },
+   
+      {
+        reviewer_name: "khawar khan",
+        review_text: "Thank you for making methylphenidate available in Pakistan! This product has truly transformed my focus and productivity. I’m grateful for the positive impact it’s had on my life.",
+        stars: 5,
+      },
+    ],
+   },
     {
       id: 2,     
       name: "Vyas 70mg",
