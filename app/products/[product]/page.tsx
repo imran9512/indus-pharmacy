@@ -89,8 +89,9 @@ export default async function Product({ params }: ProductSlug) {
                   What People says about {product?.name} and our service
                 </p>
                 <p className="text-xs text-zinc-600">
-                  {product.reviewSchema}
-
+                  {product.reviewer_name}
+                  {product.review_text}
+                  {product.stars}
                 </p>
           </div>
         </article>
