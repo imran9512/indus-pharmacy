@@ -77,21 +77,20 @@ export default async function Product({ params }: ProductSlug) {
                 </p>
               </div>
             </div>
-            
-          <p className="font-semibold text-xs text-zinc-600">
-                  What People says about {product?.name} and our service
-                </p>
-                <p className="text-xs text-zinc-600">
-                  reviews will be shown here soon
-                </p>
+            <div>
+            <p className="font-semibold text-xs text-zinc-600">
+             What People says about {product?.name} and our service
+            </p>
+            <p className="text-xs text-zinc-600">
+            reviews will be shown here soon
+            </p>
+            </div>
           </div>
           <div className=" lg:basis-1/2 rounded-lg order-1">
             <ProductCarousel
               images={product.images}
               productName={product.name}
             />
-          </div>
-          <div>
           </div>
         </article>
       )}
