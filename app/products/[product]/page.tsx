@@ -70,7 +70,7 @@ export default async function Product({ params }: ProductSlug) {
               </div>
               <div>
                 <p className="font-semibold text-xs text-zinc-600">
-                  Product Information and Usage
+                  Information and Usage
                 </p>
                 <p className="text-xs text-zinc-600">
                   {product.additional_info}
@@ -83,6 +83,14 @@ export default async function Product({ params }: ProductSlug) {
               images={product.images}
               productName={product.name}
             />
+          </div>
+          <div>
+          <p className="font-semibold text-xs text-zinc-600">
+                  What People says about {product?.name} and our service
+                </p>
+                <p className="text-xs text-zinc-600">
+                  {product.reviews}
+                </p>
           </div>
         </article>
       )}
