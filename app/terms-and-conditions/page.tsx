@@ -7,7 +7,7 @@ export default function TermsAndConditions() {
 We take pride in offering only imported, 100% original products through our online platform in Pakistan. Our commitment to quality ensures that all items available for sale have been sourced from reputable suppliers, allowing you to shop with confidence. 🛒
 
 <strong>Responsibility for Usage ⚠️</strong>
-We strongly recommend that all buyers purchase products based on their doctor's prescriptions or after conducting comprehensive research regarding their specific needs. It is important to understand that we cannot be held responsible for any misuse, side effects, or adverse reactions resulting from the use of our products. Your health and safety are paramount, so please ensure that you make informed decisions. 🩺
+We strongly recommend that all buyers purchase products based on their doctor &#39; s prescriptions or after conducting comprehensive research regarding their specific needs. It is important to understand that we cannot be held responsible for any misuse, side effects, or adverse reactions resulting from the use of our products. Your health and safety are paramount, so please ensure that you make informed decisions. 🩺
 
 
 <strong>Return Policy 🚫 </strong>
