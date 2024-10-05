@@ -33,7 +33,6 @@ export const AllProducts: AllProductsType = [
         review_text: "I highly recommend methylphenidate for anyone struggling with ADHD. It has significantly improved my concentration and daily functioning. Don’t hesitate to give it a try.",
         stars: 5,
       },
-   
       {
         reviewer_name: "khawar khan",
         review_text: "Thank you for making methylphenidate available in Pakistan! This product has truly transformed my focus and productivity. I’m grateful for the positive impact it’s had on my life.",

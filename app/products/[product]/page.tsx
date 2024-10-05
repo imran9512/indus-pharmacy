@@ -87,6 +87,21 @@ export default async function Product({ params }: ProductSlug) {
             reviews will be shown here soon..
             </p>
             </div>
+               <div className="mt-10">
+                  <h2>Customer Reviews</h2>
+                  {reviews.length > 0 ? (
+                    reviews.map((review) => (
+                      <ProductReview
+                        key={review.id} // Use a unique identifier (optional)
+                        reviewerName={review.reviewer_name}
+                        reviewText={review.review_text}
+                        stars={review.stars}
+                      />
+                    ))
+                  ) : (
+                    <p>No reviews yet. Be the first to leave one!</p>
+                  )}
+            </div>
           </div>
           
           <div className=" lg:basis-1/2 rounded-lg order-1">
