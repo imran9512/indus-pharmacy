@@ -1,7 +1,7 @@
 export default function TermsAndConditions() {
   return <main className="flex items-center justify-center min-h-[90vh] mt-6">
     <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
-    <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <div className="max-w-1xl">
         <h1 className="text-xl font-bold mb-4">Welcome to Malesort.com!</h1>
         <p className="mb-6">By accessing our website and making a purchase, you agree to adhere to the following terms and conditions:</p>
 
