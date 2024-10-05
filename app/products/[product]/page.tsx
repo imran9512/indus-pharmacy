@@ -3,6 +3,7 @@ import AddToCart from "@/components/product-checkout/add-to-cart";
 import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
 import { notFound } from "next/navigation";
+import ProductReview from "@/components/ProductReview";
 
 type ProductSlug = {
   params: { product: string };
@@ -83,9 +84,21 @@ export default async function Product({ params }: ProductSlug) {
             <p className="font-semibold text-xs text-zinc-600">
              What People says about {product?.name} and our service
             </p>
-            <p className="text-xs text-zinc-600">
-            reviews will be shown here soon..
-            </p>
+              <div className="mt-10">
+                <h2>Customer Reviews</h2>
+                {reviews.length > 0 ? (
+                  reviews.map((review) => (
+                    <ProductReview
+                      key={review.id} // Use a unique identifier (optional)
+                      reviewerName={review.reviewer_name}
+                      reviewText={review.review_text}
+                      stars={review.stars}
+                    />
+                  ))
+                ) : (
+                  <p>No reviews yet. Be the first to leave one!</p>
+                )}
+              </div>
             </div>
           </div>
           
