@@ -5,6 +5,13 @@ import { getProductBySlug } from "@/lib/getProductBySlug";
 import { notFound } from "next/navigation";
 import ProductReview from "@/components/ProductReview";
 
+const product = await getProductBySlug(productSlug);
+if (!productSlug) {
+  notFound();
+}
+
+const { reviews } = product;
+
 type ProductSlug = {
   params: { product: string };
 };
