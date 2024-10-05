@@ -3,6 +3,7 @@ import AddToCart from "@/components/product-checkout/add-to-cart";
 import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
 import { notFound } from "next/navigation";
+import ProductReview from "@/components/ProductReview";
 
 type ProductSlug = {
   params: { product: string };
