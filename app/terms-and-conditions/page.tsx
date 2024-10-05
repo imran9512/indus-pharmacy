@@ -1,3 +1,31 @@
 export default function TermsAndConditions() {
-  return <main></main>;
+  return <main className="flex items-center justify-center min-h-[90vh] mt-6">
+    <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
+    <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 className="text-xl font-bold mb-4">Welcome to Malesort.com!</h1>
+        <p className="mb-6">By accessing our website and making a purchase, you agree to adhere to the following terms and conditions:</p>
+
+        <strong className="text-lg">Product Authenticity ✅</strong>
+        <p className="ml-8">We take pride in offering only imported, 100% original products through our online platform in Pakistan. Our commitment to quality ensures that all items available for sale have been sourced from reputable suppliers, allowing you to shop with confidence. 🛒</p>
+
+        <strong className="text-lg mt-4">Responsibility for Usage ⚠️</strong>
+        <p className="ml-8">We strongly recommend that all buyers purchase products based on their doctor's prescriptions or after conducting comprehensive research regarding their specific needs. It is important to understand that we cannot be held responsible for any misuse, side effects, or adverse reactions resulting from the use of our products. Your health and safety are paramount, so please ensure that you make informed decisions. 🩺</p>
+
+        <strong className="text-lg mt-4">Return Policy 🚫</strong>
+        <p className="ml-8">Due to the stringent storage requirements and temperature controls necessary for medicines, we regret to inform you that we cannot accept returns of any products. We urge all buyers to thoroughly evaluate their purchasing decisions and confirm the quantity and type of product they require before finalizing their order. This precaution helps ensure that you receive the right products for your needs. 📋</p>
+
+        <strong className="text-lg mt-4">Product Packaging Variations 📦</strong>
+        <p className="ml-8">Please be aware that packaging may differ from the images displayed on our website. This variation is often due to different regulatory requirements in various countries where the same brand operates. While the outer packaging may show some differences, rest assured that the product contained within will remain consistent in quality and formulation. 🌍</p>
+
+        <strong className="text-lg mt-4">Purchase of Expensive Medicines 💊</strong>
+        <p className="ml-8">For certain highly expensive medications, it is possible to purchase quantities that are less than a full box or strip. If you require such specific quantities, we encourage you to utilize the “Contact Us” option for assistance. Our team is here to help you find the right solution for your needs. 💬</p>
+
+        <strong className="text-lg mt-4">Communication 📱</strong>
+        <p className="ml-8">Effective communication is key to ensuring a smooth purchasing experience. Therefore, it is essential that any inquiries are made using a contact number that is registered on WhatsApp. We will communicate solely through this platform to provide timely and efficient responses to your questions or concerns. 🗨️</p>
+
+        <strong className="text-lg mt-4">Order Cancellation ❌</strong>
+        <p className="ml-8">We reserve the right to cancel any order at our discretion and without prior notice. This policy helps us maintain the integrity of our operations and ensures that we can provide the best service to our customers. 🔄</p>
+    </div>
+    </article>
+  </main>;
 }
