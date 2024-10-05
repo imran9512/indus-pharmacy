@@ -14,7 +14,7 @@ export default function TermsAndConditions() {
 
           <h2 className="text-xl font-semibold mt-6 mb-2 text-purple-500">Responsibility for Usage ⚠️</h2>
           <p className="mb-4 text-gray-700">
-              We strongly recommend that all buyers procure products based on their doctor's prescriptions or after conducting thorough research regarding their specific health needs. It is imperative to acknowledge that we cannot be held liable for any misuse, side effects, or adverse reactions stemming from the use of our products. Your health and safety are of utmost importance; therefore, we urge you to make informed decisions. 🩺
+              We strongly recommend that all buyers procure products based on their doctor&#39;s prescriptions or after conducting thorough research regarding their specific health needs. It is imperative to acknowledge that we cannot be held liable for any misuse, side effects, or adverse reactions stemming from the use of our products. Your health and safety are of utmost importance; therefore, we urge you to make informed decisions. 🩺
           </p>
 
           <h2 className="text-xl font-semibold mt-6 mb-2 text-red-500">Return Policy 🚫</h2>
