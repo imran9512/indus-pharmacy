@@ -26,6 +26,7 @@ export default async function Product({ params }: ProductSlug) {
               price={product.price}
               quantity={product.amount}
               brandName={product.brand}
+              sku={product.sku}
             />
             <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
