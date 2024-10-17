@@ -2,3 +2,12 @@
   @tailwind components;
   @tailwind utilities;
   
+.py-6 {
+    padding-top: 1.0rem !important;
+    padding-bottom: 1.0rem !important;
+}
+@media (max-width: 600px) {
+  .text-smaller-mobile {
+    font-size: 75% !important; /* Adjust size as needed */
+  }
+}
