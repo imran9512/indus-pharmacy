@@ -12,8 +12,8 @@ export const AllProducts: AllProductsType = [
     description: `Ritalin, used for treating ADHD, enhances focus and impulse control by increasing dopamine and norepinephrine levels in the brain. It provides effective symptom management and is available in various formulations, including immediate and extended-release, to suit individual needs.`,
     made_in: "Spain",
     imported_from: "USA",
-    active_substances: ["Methylphenidate"],
-    additional_info: `Ritalin is use to treat ADHD in human with peace of mind`,
+    active_substances: ["Substance1"],
+    additional_info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     in_stock: true,
     images: [
       "Ritalin 10 - Methylph.jpg",
