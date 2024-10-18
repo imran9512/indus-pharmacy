@@ -13,7 +13,7 @@ export const AllProducts: AllProductsType = [
     made_in: "Spain",
     imported_from: "USA",
     active_substances: ["Substance1"],
-    additional_info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+    additional_info: `Ritalin is use to treat ADHD in human with peace of mind.`,
     in_stock: true,
     images: [
       "Ritalin 10 - Methylph.jpg",
