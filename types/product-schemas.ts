@@ -23,6 +23,12 @@ const productSchema = z.object({
   amount: z.string(),
   catagories: z.array(z.string()),
   reviews: z.array(reviewSchema),
+  metaData: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+    })
+    .optional(),
 });
 
 const allProductsSchema = z.array(productSchema);
