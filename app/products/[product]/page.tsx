@@ -10,7 +10,7 @@ type ProductSlug = {
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
-  if (!productSlug) {
+  if (!productSlug || !product) {
     notFound();
   }
 
