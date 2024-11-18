@@ -9,6 +9,16 @@ import { notFound } from "next/navigation";
 type ProductSlug = {
   params: { product: string };
 };
+export async function generateMetadata({ params }: ProductSlug) {
+  const productSlug = params.product;
+  const product = await getProductBySlug(productSlug);
+  return {
+    title: `${
+      product?.metaData?.title ? product?.metaData?.title : product?.name
+    } | Male Sort`,
+    description: product?.metaData?.description,
+  };
+}
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
