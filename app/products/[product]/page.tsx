@@ -13,7 +13,7 @@ export default async function Product({ params }: ProductSlug) {
   if (!productSlug || !product) {
     notFound();
   }
-
+  const { reviews } = product;
   return (
     <main className="flex items-center justify-center min-h-[90vh] mt-6">
       {product && (
@@ -27,6 +27,7 @@ export default async function Product({ params }: ProductSlug) {
               quantity={product.amount}
               brandName={product.brand}
               sku={product.sku}
+              averageRating={0}
             />
             <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>

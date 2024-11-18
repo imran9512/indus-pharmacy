@@ -7,6 +7,7 @@ type ProductHeaderType = {
   sku: string;
   price: number;
   quantity: string;
+  averageRating: number;
 };
 export default function ProductHeader({
   brandName,
@@ -15,6 +16,7 @@ export default function ProductHeader({
   productName,
   price,
   quantity,
+  averageRating,
 }: ProductHeaderType) {
   return (
     <header className="flex flex-col gap-1">
