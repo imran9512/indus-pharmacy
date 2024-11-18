@@ -23,12 +23,18 @@ const productSchema = z.object({
   amount: z.string(),
   catagories: z.array(z.string()),
   reviews: z.array(reviewSchema),
+  metaData: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+    })
+    .optional(),
 });
 
 const allProductsSchema = z.array(productSchema);
 
 type Product = z.infer<typeof productSchema>;
 type AllProductsType = z.infer<typeof allProductsSchema>;
-
+type ReviewsType = z.infer<typeof reviewSchema>;
 export { productSchema, allProductsSchema };
-export type { Product, AllProductsType };
+export type { Product, AllProductsType, ReviewsType };
