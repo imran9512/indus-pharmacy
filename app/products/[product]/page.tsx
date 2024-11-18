@@ -28,7 +28,7 @@ export default async function Product({ params }: ProductSlug) {
               quantity={product.amount}
               brandName={product.brand}
               sku={product.sku}
-              averageRating={4.5}
+              averageRating={averageRating}
             />
             <AddToCart product={product} />
             <p className="text-xs text-zinc-600 pb-8">{product.description}</p>
@@ -79,7 +79,7 @@ export default async function Product({ params }: ProductSlug) {
               </div>
             </div>
           </div>
-          <div className=" lg:basis-1/2 rounded-lg order-1">
+          <div className="lg:basis-1/2 rounded-lg order-1">
             <ProductCarousel
               images={product.images}
               productName={product.name}
