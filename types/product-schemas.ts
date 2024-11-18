@@ -35,6 +35,6 @@ const allProductsSchema = z.array(productSchema);
 
 type Product = z.infer<typeof productSchema>;
 type AllProductsType = z.infer<typeof allProductsSchema>;
-
+type ReviewsType = z.infer<typeof reviewSchema>;
 export { productSchema, allProductsSchema };
-export type { Product, AllProductsType };
+export type { Product, AllProductsType, ReviewsType };

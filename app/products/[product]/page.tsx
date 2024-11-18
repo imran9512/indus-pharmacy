@@ -1,5 +1,6 @@
 import ProductCarousel from "@/components/checkout/product-carousel";
 import AddToCart from "@/components/product-checkout/add-to-cart";
+import CustomerReviews from "@/components/product-checkout/customer-reviews";
 import ProductHeader from "@/components/product-checkout/product-header";
 import { getProductBySlug } from "@/lib/getProductBySlug";
 import { calculateAverageRating } from "@/lib/utils";
@@ -16,7 +17,7 @@ export default async function Product({ params }: ProductSlug) {
   }
   const averageRating = calculateAverageRating(product.reviews);
   return (
-    <main className="flex items-center justify-center min-h-[90vh] mt-6">
+    <main className="flex flex-col items-center justify-center min-h-[90vh] mt-6 max-w-screen-2xl mx-auto overflow-x-hidden">
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
           <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto rounded-lg order-2">
@@ -87,6 +88,7 @@ export default async function Product({ params }: ProductSlug) {
           </div>
         </article>
       )}
+      <CustomerReviews reviews={product.reviews} />
     </main>
   );
 }
