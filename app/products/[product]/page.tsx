@@ -9,54 +9,84 @@ import { notFound } from "next/navigation";
 type ProductSlug = {
   params: { product: string };
 };
+
 export async function generateMetadata({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
+
   return {
-    title: `${
-      product?.metaData?.title ? product?.metaData?.title : product?.name
-    } | Male Sort`,
+    title: `${product?.metaData?.title ? product?.metaData?.title : product?.name} | Male Sort`,
     description: product?.metaData?.description,
   };
 }
+
+function generateProductSchema(product: any, averageRating: number) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images, // Array of image URLs
+    description: product.description,
+    sku: product.sku,
+    brand: {
+      "@type": "Brand",
+      name: product.brand,
+    },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD", // Replace with your currency
+      price: product.price,
+      itemCondition: "https://schema.org/NewCondition", // Update condition if necessary
+      availability: product.in_stock
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: averageRating.toFixed(1),
+      reviewCount: product.reviews.length,
+    },
+    review: product.reviews.map((review: any) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: review.author,
+      },
+      datePublished: review.date,
+      reviewBody: review.content,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: "5",
+        worstRating: "1",
+      },
+    })),
+  };
+}
+
 export default async function Product({ params }: ProductSlug) {
   const productSlug = params.product;
   const product = await getProductBySlug(productSlug);
+
   if (!productSlug || !product) {
     notFound();
   }
+
   const averageRating = calculateAverageRating(product.reviews);
+  const productSchema = generateProductSchema(product, averageRating);
+
   return (
     <main className="flex flex-col items-center justify-center min-h-[90vh] mt-6 max-w-screen-2xl mx-auto overflow-x-hidden">
-      
-      <Head>
+      {/* JSON-LD injected as part of the DOM */}
+      <div style={{ display: "none" }}>
         <script type="application/ld+json">
-          {/* Paste your JSON-LD schema data here */}
-          {JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": product.name,
-            "image": product.images?.[0], // Assuming the first image is the main one
-            "description": product.description,
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR", // Replace with your currency
-              "price": product.price,
-              "availability": "https://schema.org/InStock" // Update if not in stock
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": averageRating,
-              "reviewCount": product.reviews.length
-            }
-          })}
+          {JSON.stringify(productSchema)}
         </script>
-      </Head>
-      
+      </div>
+
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
           <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto rounded-lg order-2">
-            {/* xl:fixed xl:top-20 xl:right-20 2xl:right-58 3xl:right-60 4xl:right-80 5xl:right-96 */}
             <ProductHeader
               productName={product?.name}
               inStock={product?.in_stock}
