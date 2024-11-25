@@ -28,6 +28,31 @@ export default async function Product({ params }: ProductSlug) {
   const averageRating = calculateAverageRating(product.reviews);
   return (
     <main className="flex flex-col items-center justify-center min-h-[90vh] mt-6 max-w-screen-2xl mx-auto overflow-x-hidden">
+      
+      <Head>
+        <script type="application/ld+json">
+          {/* Paste your JSON-LD schema data here */}
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": product.name,
+            "image": product.images?.[0], // Assuming the first image is the main one
+            "description": product.description,
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "PKR", // Replace with your currency
+              "price": product.price,
+              "availability": "https://schema.org/InStock" // Update if not in stock
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": averageRating,
+              "reviewCount": product.reviews.length
+            }
+          })}
+        </script>
+      </Head>
+      
       {product && (
         <article className="flex flex-col lg:flex-row items-center justify-between max-w-screen-xl px-4 w-full gap-6 lg:gap-24">
           <div className="p-4 max-w-xl md:p-10 mb-10 lg:basis-1/2 w-full lg:ml-auto rounded-lg order-2">
