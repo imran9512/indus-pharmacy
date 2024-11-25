@@ -34,7 +34,7 @@ function generateProductSchema(product: any, averageRating: number) {
     },
     offers: {
       "@type": "Offer",
-      priceCurrency: "USD", // Replace with your currency
+      priceCurrency: "PKR", // Replace with your currency
       price: product.price,
       itemCondition: "https://schema.org/NewCondition", // Update condition if necessary
       availability: product.in_stock
